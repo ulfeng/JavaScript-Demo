@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>网页每次刷新，随机变换背景颜色</title>
+    <style>
+        body {
+                  }
+    </style>
+</head>
+<body id="test" onload="changeTest()">
+    <h1>XXXXXX</h1>
+    <script>
+        //window.onload = changeTest();
+        function randomColor() {
+            var arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"];
+            var strColor = "#";
+            for (var i = 0; i < 6; i++) {
+                var index = Math.round(Math.random() * 15);
+                strColor += arr[index];
+            }
+            return strColor;
+        }
+        function changeTest() {
+            var bgColor=randomColor();
+            var testX = document.getElementById("test");
+            testX.style.backgroundColor = bgColor;
+        }
+    </script>
+</body>
+</html>
