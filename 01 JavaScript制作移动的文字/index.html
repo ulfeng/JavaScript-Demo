@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        body {
+            width:100%;
+            height:auto;
+        }
+        #test {
+            width:900px;
+            height:200px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">joyFun.com</div>
+    <script>
+        // 一段文字是静止的，鼠标放上以后滚动（从左到右），鼠标移开停在这个位置
+
+        var testX = document.getElementById("test");
+        testX.onmouseover = function () {
+            testOver();
+        }
+        testX.onmouseout = function () {
+            testStop();
+        }
+
+        // 记录margin-left的值
+        var mar = 0;
+        // 元素是否移动的标志
+        var flag = 0;
+        function testOver() {
+            // 鼠标经过，开始移动
+            flag = 1;
+            testMove();
+        }
+        function testStop() {
+            // 鼠标移出，将移动标志取消
+            flag = 0;
+        }
+        function testMove() {
+            testX.style.marginLeft = mar + "px";
+            // 移动元素
+            mar++;
+            // 如果鼠标没有移出，就一直移动
+            if (flag == 1) {
+                setTimeout(testMove, 100);
+            }
+        }
+    </script>
+</body>
+</html>
