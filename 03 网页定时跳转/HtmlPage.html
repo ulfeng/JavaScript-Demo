@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        var x;
+        window.onload = init();
+        function init() {
+            // 设置，页面载入完毕之后，1秒不动鼠标，页面自动跳转
+            x = setTimeout("location.href='http://www.baidu.com'", 1000);
+            // alert("xx");
+            // 鼠标在网页上移动调用moved函数
+            document.onmousemove = moved();
+        }
+        function moved() {
+            // 既然鼠标移动了，取消页面跳转
+            clearTimeout(x);
+            // 从现在开始计时，如果到了1秒还是要跳转
+            alert("x");
+            x = setTimeout("location.href='http://www.baidu.com'", 5000);
+        }
+    </script>
+    <p>Test 页面</p>
+</body>
+</html>
