@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    
+    <input type="text" id="test" onkeypress="disButton()" />
+    <button disabled="disabled" id="testButton">Try it</button>
+    <script>
+        var str = document.getElementById("test").value;
+        var testButton = document.getElementById("testButton");
+        function disButton() {
+
+            if (str == "") {
+                testButton.disabled = true;
+                alert("disabled");
+            }
+            else {
+                testButton.disabled = false;
+                alert("noDisabled");
+            }
+            
+        }
+        //str.onkeypress = disButton();  // 按键盘输入一个数值并离开
+
+    </script>
+</body>
+</html>
