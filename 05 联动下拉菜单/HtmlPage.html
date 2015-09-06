@@ -6,12 +6,15 @@
 </head>
 <body>
     <form name="f1">
-        <select name="s1" onchange="chg(document.f1.s1,document.f1.s2)">
+        <select name="s1" id="s1">
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
             <option value="江西">江西</option>
             <option value="福建">福建</option>
         </select>
         <select name="s2">
-            <option value="1">1</option>
+            <option value="海淀区">海淀区</option>
+            <option value="昌平区">昌平区</option>
         </select>
     </form>
     <script>
@@ -24,6 +27,10 @@
 
         // 设置选项数组，可以添加多个参数为"源地址，选择值，选择文本"
         var Set_data = new Array(
+            new obj("北京", "海淀区", "海淀区"),
+            new obj("北京", "昌平区", "昌平区"),
+            new obj("上海", "浦东新区", "浦东新区"),
+            new obj("上海", "长宁区", "长宁区"),
             new obj("江西","南昌","南昌"),
             new obj("江西", "九江", "九江"),
             new obj("福建", "福州", "福州"),
@@ -62,6 +69,10 @@
                 // 插入option(注：length属性比最大下标大1)
                 aList.options[aList.options.length] = aOption;
             }
+        }
+
+        document.getElementById("s1").onchange = function(){
+            chg(document.f1.s1, document.f1.s2);
         }
     </script>
 </body>
