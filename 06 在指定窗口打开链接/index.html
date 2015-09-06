@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+    <!-- 1、内联框架 iframe 实现 -->
+    <a href="http://www.163.com" target="content">网易</a>
+    <a href="http://www.sohu.com" target="content">sohu</a>
+    <iframe height="300" width="100%" name="content"></iframe>  
+    
+     <!-- 2、JavaScript window.open  -->
+     <script>
+         // win变量用来存储窗口的window
+         var win = null;
+         function specific(addr) {
+             // 如果指定窗口没有被打开的话
+             if (!win) {
+                 // 按照传入的地址创建窗口
+                 win = window.open(addr, '', '');
+             }
+             else {
+                 // 窗口已经存在，那么只需改变地址
+                 win.location.href = addr;
+             }
+         }
+     </script>
+
+    <!-- 3、点击弹出窗口 -->
+    <script>
+        function openWin(v) {
+            var str = "width=200,height=200,left=200,top=200,status=no,scrollbaras=no,"
+            str += "menubar=no,toolbar=no,resizable=no,location=no";
+            window.open(v, "", str);
+        }
+    </script>
+</body>
+</html>
