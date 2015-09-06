@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JavaScript 实现联动下拉菜单</title>
+</head>
+<body>
+    <form name="f1">
+        <select name="s1" onchange="chg(document.f1.s1,document.f1.s2)">
+            <option value="江西">江西</option>
+            <option value="福建">福建</option>
+        </select>
+        <select name="s2">
+            <option value="1">1</option>
+        </select>
+    </form>
+    <script>
+        // 创建对象， 数据，值，文本
+        function obj(aData, aValue, aText) {
+            this.Data = aData;
+            this.Value = aValue;
+            this.Text = aText;
+        }
+
+        // 设置选项数组，可以添加多个参数为"源地址，选择值，选择文本"
+        var Set_data = new Array(
+            new obj("江西","南昌","南昌"),
+            new obj("江西", "九江", "九江"),
+            new obj("福建", "福州", "福州"),
+            new obj("福建", "厦门", "厦门")
+            )
+
+        // 该函数接收两个参数--两个下拉菜单
+        function chg(parent, child) {
+            // 以父菜单的选中选项的值，子菜单，和选项数数据组为参数调用chg函数
+            chgComitem(parent.options[parent.selectedIndex].value, child, Set_data);
+        }
+
+        function chgComitem(parentValue, child, objs) { // 改变子菜单
+            // 1.以子菜单为参数调用函数
+            DelAllComitem(child);
+            // 2.遍历所有的选项数据
+            for (i = 0; i < objs.length; i++) {
+                // 如果选项数据的Data与父菜单选中值一样的话
+                if (objs[i].Data == parentValue) {
+                    // 3.以子菜单，选项数据的值，选项数据的文本作为参数调用addComitem
+                    AddComitem(child, objs[i].Value, objs[i].Text);
+                }
+            }
+            // 1.删除子菜单中的所有元素
+            function DelAllComitem(aList) {
+                // 传入的是select元素，让options全为null
+                for (i = aList.options.length - 1; i >= 0; i--) {
+                    aList.options[i] = null;
+                }
+            }
+
+            // 2.添加自菜单的元素
+            function AddComitem(aList, aValue, aText) {
+                // 用传入的文本和值来创建option
+                var aOption = new Option(aText, aValue);
+                // 插入option(注：length属性比最大下标大1)
+                aList.options[aList.options.length] = aOption;
+            }
+        }
+    </script>
+</body>
+</html>
