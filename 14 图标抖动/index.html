@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <script src="js/base.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#ul img").each(function (k, img) {
+                new JumpObj(img, 10);
+                //第一个参数代表元素对象
+                //第二个参数代表抖动幅度
+            });
+        });
+</script>
+     <style>
+        body {
+         overflow: auto;
+         overflow-x:hidden;
+         overflow-y:hidden;
+        }
+    </style>
+    <title>首页1</title>
+    <!--[if lte IE 10]>  
+  
+        <style>
+        .logo {
+            position:relative;
+            padding-top:100px;
+        }
+
+         .home1_nav {
+            position:relative;
+        }
+          .home1_href {
+            position:relative;
+        }
+         .footer{
+            margin-top:-30px;
+        }
+        .home1 .home1_href p {margin-bottom:0px;}
+        .home{margin-top:5%;}
+        .footer{padding-top:0px;}
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $(".logo").animate({ bottom: '100px' },1200);
+            $(".home1_nav").animate({ bottom: '100px' },1000);
+            $(".home1_href").animate({ bottom: '100px' },1000);
+        });
+    </script>  
+           
+    <![endif]-->
+
+</head>
+<body id="home1">
+
+    <div class="home1">
+       
+        <div class="home1_nav">
+             <ul id="ul" class="nav">
+                <li class="News" style="float:left;">
+                    <a href="home2.html"><img src="images/nav_1.jpg" /></a>
+                    <a href="home2.html"><p>能矿聚焦</p></a>
+                    <span style="padding-left: 10px;">News</span>
+                </li>
+                <li class="Notice">
+                   <a href="home2.html"> <img src="images/nav_2.jpg" /></a>
+                    <a href="home2.html"><p>产业动态</p></a>
+                    <span style="padding-left: 6px;">Notice</span>
+                </li>
+                <li class="GrassRoots">
+                   <a href="home2.html"> <img src="images/nav_3.jpg" /></a>
+                    <a href="home2.html"><p>基层信息</p></a>
+                    <span>GrassRoots</span>
+                </li>
+                <li class="Culture">
+                   <a href="home2.html"> <img src="images/nav_4.jpg" /></a>
+                    <a href="home2.html"><p>企业文化</p></a>
+                    <span style="padding-left: 5px;">Culture</span>
+                </li>
+                <li class="About_Us on">
+                   <a href="home2.html"> <img src="images/nav_5.jpg" /></a>
+                    <a href="home2.html"><p>关于我们</p></a>
+                    <span>About US</span>
+                </li>
+            </ul>
+          
+        </div>
+
+    </div>
+
+</body>
+</html>

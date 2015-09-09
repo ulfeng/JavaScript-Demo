@@ -1,0 +1,128 @@
+﻿/*通用类*/
+*{
+	margin:0;
+	padding:0;	
+}
+html {
+    /*overflow:scroll;
+    overflow-x:hidden;*/
+    /*overflow:auto !important; overflow:hidden;
+   overflow-x: hidden; overflow-y: auto;*/ 
+}
+body{		
+	/*min-width:1100px;*/
+	margin:0 auto;
+	font-size:12px;	
+	font-family:"Microsoft Yahei";
+	color:#666;
+	background:#fbfbfb;	
+}
+h1,h2,h3{	
+	font-weight:500;	
+}
+img{
+	border:none;	
+}
+a{
+	cursor:pointer;
+	/*color:#666;*/
+	text-decoration:none;	
+}
+a:hover{
+	/*color:#468bf2;*/	
+    color:#000;
+}
+ul{
+	list-style-type:none;	
+}
+em{
+	font-style:normal;	
+}
+.lt{
+	float:left;	
+}
+.rt{
+	float:right;	
+}
+input{
+	font-family:"Microsoft Yahei";
+	color:#666;	
+}
+input.sub,label{
+	border:none;	
+	cursor:pointer;
+}
+div.clear{
+	font: 0px Arial; line-height:0;
+	height:0; 
+	overflow:hidden;	
+	clear:both;	
+}
+.container{
+	width:1100px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/*公用CSS 开始*/
+
+/*  首页1开始 */
+.home1 {
+    width:600px;
+    margin:8% auto 0;
+}
+.home1 .logo img {
+    display:block;
+    margin:0 auto;
+}
+.home1_nav .nav {
+   margin-top:60px;
+   margin-bottom:55px;
+   margin-left:30px;
+}
+.home1_nav .nav li {
+   width:114px;
+   float:left;
+}
+.home1_nav .nav li a{
+   font-size:14px;
+   color:#4b4b4b;
+}
+.home1_nav .nav li span{
+   font-size:12px;
+   color:#b3b3b3;
+}
+.home1 .home1_href{
+	width:100%;
+	height:auto;
+    margin:50px auto 0;
+    text-align:center;
+    float:left;
+
+}
+.home1 .home1_href p{
+width: 385px;
+color: #D9D9D9;
+font-size: 14px;
+border: 1px solid #90BB9F;
+padding: 10px 60px;
+margin: 0px auto 70px;
+margin-left: 30px;
+
+}
+.home1 .home1_href p a{
+	color:#108a2a;
+    font-size:14px;
+}
+
+.footer {
+    text-align:center;
+    margin-top:180px;
+    margin-bottom:15px;
+}
+.footer p {
+    margin:2px;
+        text-align:center;
+
+}
+/*  首页1结束 */
