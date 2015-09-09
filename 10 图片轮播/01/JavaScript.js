@@ -10,16 +10,6 @@
     var right = document.getElementById("right");
     bannerCon.style.width = liLen * liWidth + "px";
     function init() {
-            spanList.onclick = function () {
-                for (var i = 0; i < spanList.length; i++) {
-                    spanList[j].className = "";
-                }
-                this.className = "current";
-                a = this.index;
-                bannerCon.style.left = -a * liWidth + "px";
-
-                start = setInterval(setTime, 2000);
-        }
         start = setInterval(setTime, 2000);
     }
     init();
@@ -51,6 +41,10 @@
 
     //        start = setInterval(setTime, 2000);
     //    }
+    //}
+
+    //spanList.onclick = function () {
+    //    alert("xx");
     //}
 
     left.onclick = function () {

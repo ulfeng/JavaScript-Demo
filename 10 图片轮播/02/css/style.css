@@ -5,7 +5,13 @@
     border:1px solid #666;
     overflow:hidden;
 }
+#banner_list {
+    width:500px;
+    height:300px;
+}
 #banner_list img {
+    width:400px;
+    height:250px;
     border:0px;
 }
 #banner_bg {
@@ -44,6 +50,8 @@
     z-index:1002;
     margin:0;
     padding:0;
+    bottom:5px;
+    right:5px;
 }
 #banner ul li {
     padding:0 8px;
