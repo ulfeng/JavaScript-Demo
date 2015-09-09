@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>进度条</title>
+    <style>
+        
+/* 加载页面开始 */
+.process_bar {
+    width:600px;
+    margin:0 auto;
+    text-align:center;
+    margin-top:100px;
+    color:#818181;
+    font-size:24px;
+    font-family:Arial;
+    font-style:italic;
+}
+.bar { 
+    position: relative; 
+    width: 600px;/* 宽度 */ 
+    height:2px;
+    margin: 0 auto;
+    background-color:#e5e5e5;
+} 
+.bar div { 
+    display: block;
+    position: relative;
+    background:#289540;   /* 进度条背景颜色 */ 
+    height: 2px;     /* 高度 */ 
+    line-height: 2px;   /* 必须和高度一致，文本才能垂直居中 */ } 
+
+/* 加载页面结束 */
+    </style>
+</head>
+<body>
+
+    <div class="process_bar">
+        <span id="percentage"></span>
+        <div id="box" class="bar">
+            <div id="process"></div>
+        </div>
+    </div>
+
+    <script>
+        var percentage = document.getElementById("percentage");
+        var box = document.getElementById("box");
+        var process = document.getElementById("process");
+        var i = 0;
+        function progressBar() {
+            i++;
+            percentage.innerHTML = (Math.ceil(i / 6)) + "%";
+            process.style.width = i + "px";
+            if (i < 600) {
+                setTimeout(progressBar, 10);
+            }
+            else {
+                // 隐藏掉进度条相关
+                box.style.display = "none";
+                percentage.style.display = "none";
+            }
+        }
+        progressBar();
+    </script>
+
+
+
+</body>
+</html>
