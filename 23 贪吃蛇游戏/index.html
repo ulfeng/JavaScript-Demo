@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery贪吃蛇游戏特效代码 - 站长素材</title>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<style>
+		#map table{border-collapse: collapse;border:1px solid lightgray;}
+		#map table td{width:10px;height:10px;}
+		.snake{background:lightgreen;}
+		.food{background: pink;}
+	</style>
+</head>
+<body><center>
+	<div id="map"></div>
+	<button>开始</button></center>
+</body>
+<script>
+	var size = 50; 						//默认地图大小 
+	var snake = []; 					//这个是我们的小蛇
+	var x=0,y=1;
+	var mask = true; 					//优化按键  用于判断
+	var timmer; 						//定时器
+	var speed = 50; 					//小蛇速度
+	var eatself = false; 				//判断是否吃了自己
+	var pos; 							//食物坐标
+
+	//相关事件
+	$(function(){
+		init(size);
+
+		draw();
+
+		food();
+	});
+
+	$("button").one('click',function(){
+		move();
+	});
+
+	//键盘事件
+	$(document).keydown(function(e){
+		switch(e.keyCode){
+			case 37:
+				if(y != 1 && mask){
+					//左
+					x = 0 , y = -1;
+					mask = false;
+				}
+				break;
+			case 38:
+				if(x != 1 && mask){
+					//上
+					x = -1 , y = 0;
+					mask = false;
+				}
+				break;
+			case 39:
+				if(y != -1 && mask){
+					//右
+					x = 0 , y = 1;
+					mask = false;
+				}
+				break;
+			case 40:
+				if(x != -1 && mask){
+					//下
+					x = 1 , y = 0;
+					mask = false;
+				}
+				break;
+		}
+	});
+
+	//画地图
+	function init(size){
+		var arr = [];
+		arr.push('<table>');
+		for(var i=0;i<size;i++){
+			arr.push('<tr>');
+				for(var j=0;j<size;j++){
+					arr.push('<td id="box_'+i+'_'+j+'"></td>');
+				}
+			arr.push('</tr>');
+		}
+
+		arr.push('</table>');
+
+		//将上面的数组拼接成字符串添加到地图区域
+		$("#map").html(arr.join(''));
+
+		//初始化小蛇
+		for(var k=0;k<3;k++){
+			snake[snake.length] = [3,k+3]; 
+		}
+	}
+
+	function draw(){
+		//清除掉所有的颜色
+		$("td").removeClass('snake');
+		//给小蛇上色
+		for(var i=0;i<snake.length;i++){
+			$("#box_"+snake[i][0]+"_"+snake[i][1]).addClass('snake');
+		}
+	}
+
+	//移动小蛇
+	function move(){
+		timmer = setInterval(function(){
+			//小蛇即将到达的位置
+			var row = snake[snake.length-1][0] + x;
+			var col = snake[snake.length-1][1] + y;
+
+			if(pos[0] == row && pos[1] == col){
+				//如果吃屎了，那么不弹出
+				$("#box_"+row+"_"+col).removeClass('food');
+				food();
+
+			}else{
+				//没有吃食物才弹出第一个
+				snake.shift();
+			}
+
+			//判断是否吃了自己   eatself = true
+			for(var i in snake){
+				if(snake[i][0] == row && snake[i][1] == col){
+					//吃了自己
+					eatself = true;
+				}
+			}
+
+
+			//判断小蛇是否还在地图里面
+			if(col < 0 || col >=size || row < 0 || row >=size || eatself){
+				alert('亲！你为啥想不开呢？');
+				clearInterval(timmer);
+
+			}else{
+
+				
+				snake.push([row,col]);
+				draw();
+				mask = true;
+			}
+
+
+			
+		},speed);
+		
+	}
+
+	//随机产生食物
+	function food(){
+		var x = Math.floor(Math.random() * size);
+		var y = Math.floor(Math.random() * size);
+
+		//食物不能出现在蛇身上
+		for(var i in snake){
+			if(snake[i][0] == x && snake[i][1] == y){
+				var mask = true;
+			}
+		}
+
+		if(mask){
+			food();
+		}else{
+			pos = [x,y];
+			$("#box_"+x+"_"+y).addClass('food');
+		}
+	}
+
+	
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</html>
