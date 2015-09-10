@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;  text-align:center; margin:0 auto; }
+table{border-collapse:collapse;border-spacing:0;}
+
+.clearfloat{height:0;font-size:1px;clear:both;line-height:0;}
+
+#container{ width:718px;  margin:20px auto; padding-bottom:20px; background:#fff;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#ef9b11; text-decoration:underline;}
+
+/*box01*/
+.box01{ width:718px; height:31px; border:1px solid #ccc; text-align:right;}
+.box01 .part{ background:url(../images/bg01.gif) repeat-x; padding-top:6px; height:23px; padding-right:16px; width:700px; margin:1px;}
+.box01 .part a{ margin-right:5px; display:block; float:right; width:43px; height:16px;}
+.box01 .part .a1{ background:url(../images/bg04.gif) no-repeat;}
+.box01 .part .a1:hover{ background:url(../images/bg06.gif) no-repeat;}
+.box01 .part .a2{ background:url(../images/bg07.gif) no-repeat; }
+.box01 .part .a2:hover{ background:url(../images/bg05.gif) no-repeat; }
+

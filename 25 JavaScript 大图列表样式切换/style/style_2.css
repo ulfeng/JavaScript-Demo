@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("style.css");
+.box01 .part .a2{ background:url(../images/bg05.gif) no-repeat; }
+
+/*box02*/
+.box02{ width:718px; text-align:left;}
+.box02 .part{  padding:15px 10px; float:left;width:217px; height:270px; background:url(../images/bg02.gif) repeat-x left bottom; text-align:center;}
+.box02 .part .grp01{ width:224px; margin-bottom:10px;}
+.box02 .part .grp01 img{ width:220px; height:165px; border:1px solid #999;}
+.box02 .part .grp02{ width:224px; padding-top:4px;}
+.box02 .part .grp02 h4{ padding-bottom:3px;}
+.box02 .part .grp02 h4 a{ font-size:14px; color:#0045df; line-height:16px;}
+.box02 .part .grp02 h4 a:hover{ color:#ef9b11;}
+.box02 .part .grp02 h5{ font-size:12px; font-weight:normal; color:#666;}
+.box02 .part .grp03{width:224px; padding-top:4px;}
+.box02 .part .grp03 h6{ font-size:12px; color:#ff3300;}
+.box02 .part .grp03 b{font-size:12px; font-weight:normal; color:#666;}
+.box02 .part .grp04{ display:none;float:left;width:78px; padding-top:20px;}
+.box02 .part .grp05{ display:none;float:left; padding-left:20px; background:url(../images/bg03.gif) no-repeat left 18px;width:55px;padding-top:20px;}
