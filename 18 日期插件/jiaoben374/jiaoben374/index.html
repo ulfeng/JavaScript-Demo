@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jquery日期日历插件 - 站长素材</title>
+<!--<link rel="stylesheet" type="text/css" href="css/manhuaDate.1.0.css">-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/manhuaDate.1.0.js"></script>
+<script type="text/javascript">
+$(function (){
+	$("input.mh_date").manhuaDate({					       
+		Event : "click",//可选				       
+		Left : 0,//弹出时间停靠的左边位置
+		Top : -16,//弹出时间停靠的顶部边位置
+		fuhao : "-",//日期连接符默认为-
+		isTime : false,//是否开启时间值默认为false
+		beginY : 2010,//年份的开始默认为1949
+		endY :2015//年份的结束默认为2049
+	});
+	
+});
+</script>
+
+</head>
+<body>
+<pre>
+
+&lt;script type="text/javascript"&gt;
+$(function (){
+	$("input.mh_date").manhuaDate({					       
+		Event : "click",//可选				       
+		Left : 0,//弹出时间停靠的左边位置
+		Top : -16,//弹出时间停靠的顶部边位置
+		fuhao : "-",//日期连接符默认为-
+		isTime : false,//是否开启时间值默认为false
+		beginY : 2010,//年份的开始默认为1949
+		endY :2015//年份的结束默认为2049
+	});
+});
+&lt;/script&gt;
+用法如下：
+&lt;input type="text" class="mh_date" readonly="true" /&gt;
+</pre>
+<br /><br />
+<h1>demo</h1>
+<input type="text" class="mh_date" readonly="true" />&nbsp;<input type="text" class="mh_date" readonly="true" />&nbsp;<input type="text" class="mh_date" readonly="true" />&nbsp;<input type="text" class="mh_date" readonly="true" />
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
