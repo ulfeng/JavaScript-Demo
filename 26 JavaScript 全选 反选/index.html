@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>js表格列表全选反选删除 - 站长素材</title>
+<style type="text/css">
+table{
+    border:#0FF 1px solid;
+    border-collapse:collapse;
+    }
+   
+table th{
+        text-align:center;
+        }
+table td{
+    border:1px solid #999;
+    text-align:center;
+        }
+.one{
+    background:#9FC;
+    }
+.two{
+    background:#FC6;
+    }
+</style>
+<script type="text/javascript" language="javascript">
+function gehang(){
+    //获取tr节点
+    var tr=document.getElementsByTagName("tr");
+    //为第一行添加背景颜色
+       tr[0].style.background="#00FF66";
+       //为最后一行添加背景颜色
+       tr[tr.length-1].style.background="#00FF66";
+                }
+    //创建全选反选函数
+    function xuan(type){
+        //获取name值
+        var qcheck=document.getElementsByName("check[]");
+        //获取选的按钮
+        if(type=="qx"){
+            for(var i=0;i<=qcheck.length;i++){
+                qcheck[i].checked=true;
+                                             }
+                      }
+            if(type=="fx"){
+            for(var i=0;i<=qcheck.length;i++){
+                qcheck[i].checked=false;
+                                              }
+                          }
+           
+            if(type=="qxx"){
+            for(var i=0;i<=qcheck.length;i++){
+                 if(qcheck[i].checked){
+           qcheck[i].checked=false;
+                                     }
+                                  else{
+           qcheck[i].checked=true;
+        
+            }
+                }
+            }
+        }
+        function del(){
+            var input=document.getElementsByName("check[]");
+            for(var i=input.length-1; i>=0;i--){
+                   if(input[i].checked==true){
+                       //获取td节点
+                       var td=input[i].parentNode;
+                      //获取tr节点
+                      var tr=td.parentNode;
+                      //获取table
+                      var table=tr.parentNode;
+                      //移除子节点
+                      table.removeChild(tr);
+                 }
+               
+                }
+       
+            }
+</script>
+</head>
+<body onload="gehang()">
+
+<table width="400" border="0" align="center">
+	<tr>
+		<th><input onclick="xuan('qx')" type="checkbox">全选</th>
+		<th>发件人</th>
+		<th>邮件名称</th>
+		<th>邮件附属信息</th>
+	</tr>
+	<tr class="one">
+		<td><input type="checkbox" name="check[]"></td>
+		<td>张三11</td>
+		<td>我是邮件11</td>
+		<td>我是附属信息11</td>
+	</tr>
+	<tr class="two">
+		<td><input type="checkbox" name="check[]"></td>
+		<td>张三12</td>
+		<td>我是邮件12</td>
+		<td>我是附属信息12</td>
+	</tr>
+	<tr class="one">
+		<td><input type="checkbox" name="check[]" /></td>
+		<td>张三13</td>
+		<td>我是邮件13</td>
+		<td>我是附属信息13</td>
+	</tr>
+	<tr class="two">
+		<td><input type="checkbox" name="check[]"></td>
+		<td>张三14</td>
+		<td>我是邮件14</td>
+		<td>我是附属信息14</td>
+	</tr>
+	<tr class="one">
+		<td><input type="checkbox" name="check[]"></td>
+		<td>张三15</td>
+		<td>我是邮件15</td>
+		<td>我是附属信息15</td>
+	</tr>
+	<tr class="two">
+		<td><input type="checkbox" name="check[]"></td>
+		<td>张三16</td>
+		<td>我是邮件16</td>
+		<td>我是附属信息16</td>
+	</tr>
+	<tr class="one">
+		<td><input type="checkbox" name="check[]"></td>
+		<td>张三17</td>
+		<td>我是邮件17</td>
+		<td>我是附属信息17</td>
+	</tr>
+	<tr class="two">
+		<td><input type="checkbox" name="check[]"></td>
+		<td>张三18</td>
+		<td>我是邮件18</td>
+		<td>我是附属信息18</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="check[]"></td>
+		<td>张三19</td>
+		<td>我是邮件19</td>
+		<td>我是附属信息19</td>
+	</tr>
+	<tr>
+		<th><input onclick="xuan('qx')" type="checkbox">全选</th>
+		<td colspan="3" align="center">
+		<input type="button" id="qx" onclick="xuan('qx')" value="全选">
+		<input type="button" id="qxx" onclick="xuan('qxx')" value="取消全选">
+		<input type="button" id="fx" onclick="xuan('fx')" value="反选">
+		<input type="button" id="del" onclick="del()" value="删除所选附件">
+		</td>
+	</tr>
+</table>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
