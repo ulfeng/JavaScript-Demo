@@ -5,29 +5,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>js text文本框字数限制 - 站长素材</title>
 </head>
-
+<script src="JavaScript.js"></script>
 <body>
-    <form class="Form">
-        <textarea id="TextAreal" onkeyup="checkLength(this);" style="width:600px; height:84px"></textarea><br /> 
+    <form class="form">
+        <textarea id="textArea" onkeyup="checkLength()" style="width:600px; height:240px;"></textarea><br />
         <input type="button" value="try it" />  <br />
         <p>剩余字数：<span id="sy" style="color:red">20</span></p>
-
     </form>
     <script>
-        function checkLength(textLength) {
-            var maxChars=20; 
-            if (textLength.value.length > maxChars) {
-                alert("您输入的字数超出了限制！");
-                // 截取超出的字数
-                textLength.value = textLength.value.substring(0, maxChars);
-                return false;
-            }
-            else {
-                var cuur = maxChars - textLength.value.length;
-                document.getElementById("sy").innerHTML = cuur.toString();
-                return true;
-            }
-        }
+       
+
     </script>
 
 
