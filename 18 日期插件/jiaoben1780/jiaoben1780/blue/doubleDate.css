@@ -1,0 +1,33 @@
+﻿@charset "utf-8";
+
+.kui_d_pane{position:absolute;width:187px;margin:0;z-index:9999;}
+.kui_data_content_pane{border:1px solid #1F73C9;width:370px;overflow:hidden;font-size:12px;position:absolute;left:0;z-index:100;top:0;background:#fff;height:225px;}
+.kui_data_content_pane a:link,.kui_data_content_pane a:visited{color:#222222;text-decoration:none;font-weight:900;}
+.kui_data_content_pane a:hover{color:#fff;}
+.kui_date_reset{border-top:1px #2092D6 dotted;clear:both;margin:3px;padding:3px;text-align:right;}
+.kui_date_reset span{cursor:pointer;background:#2192D6;color:#FFF;padding:2px 5px;margin-left:3px;}
+.kui_prev_next_month{background:url(date_top.png) 4px 0 no-repeat;border-bottom:0px solid #fd5900;height:23px;line-height:23px;font-weight:900;text-align:center;margin-top:3px;padding-top:1px;}
+.kui_prev_m,.kui_today{float:left;margin-left:6px;}
+.kui_prev_m{background:url(date_prev.png) 0 0 no-repeat;height:21px;width:21px;}
+.kui_today,.kui_tomorrow{width:148px;text-align:center;color:#fff;cursor:default;}
+.kui_tomorrow{float:right;}
+.kui_next_m{float:right;margin-right:6px;background:url(date_next.png) 0 0 no-repeat;height:21px;width:21px;}
+
+.kui_data_tab,.kui_date_info{width:171px;margin:2px auto;zoom:1;overflow:hidden;} 
+dl.kui_data_tab dt{font-weight:900;}
+.kui_data_tab dt,.kui_date_info dt{line-height:24px;height:24px;text-align:center;border-bottom:0px solid #B2C4D2;border-right:none;cursor:default;background:#EDECEC;font:12px/24px arial;width:24px;float:left;text-align:center;}
+.d_th_bg{color:#FF9900;}
+.kui_date_info dt{background:#fff;border-left:0px solid #B2C4D2;border-bottom:0px solid #B2C4D2;color:#005DAD;font-weight:900;}
+.kui_date_info .kui_td_kong{background:#fff;cursor:default;}
+.kui_time_pane{background:#2092D6;line-height:22px;height:22px;overflow:hidden;margin-bottom:4px;padding-bottom:1px;background:url(date_top.png) 4px 0 no-repeat;}
+.kui_clean_btn{float:left;padding-left:6px;}
+.kui_close_btn{float:right;padding-right:6px;}
+.kui_time{float:left;padding-left:8px;}
+.kui_time input{width:17px;padding:1px;line-height:12px;height:12px;margin-right:2px;margin-top:2px;_margin-top:1px;}
+.kui_date_info .td_select{background:url(td_selected.png) center no-repeat;}
+.kui_date_info .td_hover{color:red;cursor:pointer;}
+.kui_txt_hide{display:none;}
+dl.kui_date_info .kui_td_hui{background:#fff;cursor:default;color:#DBDBDB;font-weight:400;}
+a img{border:0;}
+#left_table,#right_table{float:left;width:184px;height:172px;overflow:hidden;}
+#left_table{border-right:1px solid #6793BC;}
