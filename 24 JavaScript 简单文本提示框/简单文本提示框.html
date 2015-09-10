@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>简单文本提示框,适用移动web</title>
+        <script>
+            //调用代码:
+            //msgText.init(text,timer)
+            //text：提示框显示文本,类型String
+            //timer:提示框显示时间,不设置为永久显示 单位为毫秒ms
+            var msgText = {
+                init: function (text, timer) {
+                    var _cssText = "position: fixed;top: 40%;margin: 0 auto;background: rgba(0, 0, 0, 0.63);color: #fff;padding: 2px 15px;left: 45%;margin:-16px 0 0 -85px;line-height: 2;border-radius: 5px;width: 170px;-webkit-transition:all 0.3s linear;transition:all 0.3s linear";
+
+                    this.oP = document.createElement("p");
+                    this.oP.innerHTML = text;
+                    this.setCss(_cssText);
+                    this.show();
+                    timer && (this.hide(timer));
+                },
+                show: function () {
+                    document.body.appendChild(this.oP);
+                },
+                hide: function (timer) {
+                    var _this = this;
+                    setTimeout(function () {
+                        _this.oP.style.opacity = "0";
+                        setTimeout(function () {
+                            document.body.removeChild(_this.oP);
+                        }, 300)
+                    }, timer)
+                },
+                setCss: function (csstext) {
+                    this.oP.style.cssText = csstext;
+                }
+            }
+		</script>	
+	</head>
+	<body>
+		<script>
+		    //调用代码
+		    msgText.init("主题不存在或已被删除", 3000);
+		</script>
+	</body>
+    </html>
