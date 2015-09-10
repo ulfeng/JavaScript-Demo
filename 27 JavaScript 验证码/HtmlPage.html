@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <meta charset="UTF-8">
+    <title></title>
+    <script src="code.js"></script>
+    <script>
+        onload = function () {
+            //var container1 = document.getElementById("vCode1");
+            //var code1 = new vCode(container1);
+
+            //document.getElementById("btn1").addEventListener("click", function () {
+            //    alert(code1.verify(document.getElementById("code1").value));
+            //}, false);
+
+           // var code2 = new vCode(container1);
+            var container2 = document.getElementById("vCode2");
+            var code2 = new vCode(container2, {
+                len: 5,
+                bgColor: "#444444",
+                colors: [
+                    "#DDDDDD",
+                    "#DDFF77",
+                    "#77DDFF",
+                    "#99BBFF",
+                    //"#7700BB",
+                    "#EEEE00"
+                ]
+            });
+
+            document.getElementById("btn2").addEventListener("click", function () {
+                alert(code2.verify(document.getElementById("code2").value));
+            }, false);
+        };
+    </script>
+</head>
+<body>
+<div>
+   <!-- <h1>vCode 1</h1>
+    <input type="text" id="code1"/>
+    <div id="vCode1" style="width:100px; height: 30px; border: 1px solid #ccc; display: inline-block;"></div>
+    <button id="btn1">验证</button>
+</div>-->
+<div style="margin-top: 50px;">
+    <h1>vCode 2</h1>
+    <input type="text" id="code2"/>
+    <div id="vCode2" style="width:100px; height: 30px; border: 1px solid #ccc; display: inline-block;"></div>
+    <button id="btn2">验证</button>
+</div>
+
+</body>
+</html>
