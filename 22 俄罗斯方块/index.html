@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>html5俄罗斯方块游戏代码 - 站长素材</title>
+
+<link type="text/css" href="css/all.css" media="screen" rel="stylesheet" />
+
+<style>
+#container{margin:0 auto;text-align:center;}
+.cyr{text-align:center;}
+</style>
+
+<SCRIPT type="text/javascript" src="js/main.js"></SCRIPT> 
+<SCRIPT type="text/javascript" src="js/logic_min2.js"></SCRIPT>
+
+</head>
+<body style="visibility: visible; ">
+<DIV id="benjoffe">
+  <DIV id="content">
+    <DIV id="loading" style="display: none; "><IMG src="js/loading.gif" alt="" style="width:16px;height:16px;vertical-align:top;"> Loading game...</DIV>
+    <SCRIPT type="text/javascript"><!--
+if (!window.CanvasRenderingContext2D)
+{
+   document.getElementById('loading').innerHTML = 'Your browser doesn\'t support canvas, if you are using IE then the <a href="v1/">older version</a> will likely work.<br>I suggest you download a standards compliant browser such as <a href="http://www.opera.com/">Opera</a>.';
+}
+else
+{
+    document.getElementById('loading').innerHTML = '<img src="img/loading.gif" alt="" style="width:16px;height:16px;vertical-align:top;"> Loading game...';
+}
+--></SCRIPT>
+    <DIV id="container" style="visibility: visible; ">
+      <DIV id="menu" style="display:none; ">
+        <DIV id="menu_area">
+          <DIV id="screen0">
+            <DIV id="helpBox">
+              <P><B>玩法</B><BR>
+                Use the arrow keys to guide the falling blocks, spacebar and the up-arrow will rotate the block in opposite directions.
+                Alternatively the keys A,W,S and D can be used as arrow keys for the same purpose.<BR>
+                <BR>
+                When a complete horizontal ring of 15 blocks is occupied by pieces the row will collapse and earn 100 points.
+                If multiple rows are cleared at a time you will earn bonus points. </P></DIV>
+            <DIV id="copy">&#169;2010 <A href="http://www.html5china.com/">HTML5China.com</A></DIV>
+            <DIV id="but_main0" class="but"></DIV>
+          </DIV>
+          <DIV id="screen1">
+            <DIV id="go1" class="but"></DIV>
+            <DIV id="go2" class="nonstick"></DIV>
+            <DIV id="go3" class="nonstick"></DIV>
+            <DIV id="but_main1" class="but"></DIV>
+          </DIV>
+          <DIV id="screen2">
+            <DIV id="quote">"A <B>circle</B> may be small, yet it may be as mathematically beautiful and perfect as a large one."<BR>
+              <SPAN>- Isaac Disraeli</SPAN></DIV>
+            <DIV id="but_play" class="but"></DIV>
+            <DIV id="but_settings" class="but"></DIV>
+            <DIV id="but_high" class="but"></DIV>
+            <DIV id="but_help" class="but"></DIV>
+          </DIV>
+          <DIV id="screen3">
+            <SELECT id="bestType">
+              <OPTION>Traditional</OPTION>
+              <OPTION>Time Attack</OPTION>
+              <OPTION>Garbage</OPTION>
+            </SELECT>
+            <DIV id="best1"><B>Traditional</B><BR>
+              1. Empty (0)<BR>
+              2. Empty (0)<BR>
+              3. Empty (0)</DIV>
+            <DIV id="best2"><B>Time Attack</B><BR>
+              1. Empty (0)<BR>
+              2. Empty (0)<BR>
+              3. Empty (0)</DIV>
+            <DIV id="best3"><B>Garbage</B><BR>
+              1. Empty (59:59)<BR>
+              2. Empty (59:59)<BR>
+              3. Empty (59:59)</DIV>
+            <DIV id="but_main2" class="but"></DIV>
+          </DIV>
+          <DIV id="screen4">
+            <DIV id="div_base">
+              <LABEL>Skin:
+                <SELECT id="set_base">
+                  <OPTION>Glass</OPTION> 
+                </SELECT>
+              </LABEL>
+            </DIV>
+            <DIV id="div_ghost">
+              <LABEL>
+                <INPUT id="set_ghost" type="checkbox">
+                Show ghost</LABEL>
+            </DIV>
+            <DIV id="but_main3" class="but"></DIV>
+          </DIV>
+        </DIV>
+      </DIV>
+      <DIV id="out"></DIV>
+      <DIV id="playing" style="background-image: url(img/base0.png); ">
+        <CANVAS id="canvas" width="200" height="400" style="opacity: 0; "></CANVAS>
+        <DIV id="paused" style="opacity: 1; display: block; ">
+          <DIV id="but_resume" class="but"></DIV>
+          <DIV id="but_restart" class="but"></DIV>
+          <DIV id="but_quit" class="but"></DIV>
+        </DIV>
+        <DIV id="panel" style="display: none; ">
+          <DIV id="title1" style="display: block; "></DIV>
+          <DIV id="title2" style="display: none; "></DIV>
+          <DIV id="title3" style="display: none; "></DIV>
+          <DIV id="score">0</DIV>
+          <DIV id="time">0:00</DIV>
+          <DIV id="next" style="background-position: -240px 0px; "></DIV>
+          <DIV id="but_pause" class="but"></DIV>
+        </DIV>
+        <DIV id="gameover" style="display: block; ">
+          <DIV id="winner" style="display: block; ">
+            <FORM id="high_form">
+              You have achieved a high score, please enter your name:<BR>
+              <INPUT type="text" id="high_name" maxlength="20">
+              <INPUT type="submit" value="OK">
+            </FORM>
+          </DIV>
+          <DIV id="newgame" style="display: none; ">
+            <DIV id="sorryText"></DIV>
+            <DIV id="skull"></DIV>
+            <DIV id="but_restart2" class="but"></DIV>
+            <DIV id="but_main4" class="but"></DIV>
+          </DIV>
+        </DIV>
+      </DIV>
+      <DIV id="close" class="nonstick" style="left: 435px; top: 185px; "></DIV>
+    </DIV>
+  </DIV>
+  
+</DIV>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</BODY>
+</HTML>
