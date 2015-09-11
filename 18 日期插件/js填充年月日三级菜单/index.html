@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>年月日三联动下拉菜单</title>
+</head>
+<body>
+    <form name="form1">
+        <select name="YYYY" onchange="YYYYDD(this.value)">
+            <option value="" selected>请选择 年</option>
+        </select>
+        <select name="MM" onchange="MMDD(this.value)">
+            <option value="" selected>请选择 月</option>
+        </select>
+        <select name="DD">
+            <option value="" selected>选择 日</option>
+        </select>
+    </form>
+
+    <script src="JavaScript.js"></script>
+
+</body>
+</html>

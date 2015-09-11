@@ -1,4 +1,6 @@
-﻿
+﻿window.onload = function () {
+    document.getElementById("textArea").onkeyup = checkLength();
+}
 function checkLength() {
     var maxChars = 20;
     var text = document.getElementById("textArea").value;
@@ -13,3 +15,5 @@ function checkLength() {
         return true;
     }
 }
+
+
