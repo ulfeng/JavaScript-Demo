@@ -21,21 +21,22 @@
     //}
 
 // 方法2
-    var changeStyle = function (elem, attr, value) {
-        elem.style.attr = value;
-    }
-    window.onload = function () {
-        var oBtn = document.getElementsByTagName("input");
-        var oDiv = document.getElementById("demo");
-        var oAtt = ["width", "height", "background", "display", "display"];
-        var oVal = ["200px", "200px", "red", "none", "block"];
+var changeStyle = function (elem, attr, value) {
+    elem.style[attr] = value;
+}
+window.onload = function () {
+    var oBtn = document.getElementsByTagName("input");
+    var oDiv = document.getElementById("demo");
+    var oAtt = ["width", "height", "background", "display", "display"];
+    var oVal = ["200px", "200px", "red", "none", "block"];
 
-        for (var i = 0; i < oBtn.length; i++) {
-            oBtn.index = i;
-            oBtn[i].onclick = function () {
-                this.index == oBtn.length - 1 && (oDiv.style.cssText = "");
-                changeStyle(oDiv, oAtt[this.index], oVal[this.index]);
-            }
+    for (var i = 0; i < oBtn.length; i++) {
+        oBtn.index = i;
+        oBtn[i].onclick = function () {
+            this.index == oBtn.length - 1 && (oDiv.style.cssText = "");
+            changeStyle(oDiv, oAtt[this.index], oVal[this.index]);
         }
     }
+}
+
 
