@@ -48,7 +48,7 @@ function del() {
             // 获取tr节点
             var tr = td.parentNode;
             // 获取table
-            var table = tr.parentNode;
+            var table = tr.parentNode;s
             // 移除子节点
             table.removeChild(tr);
         }
