@@ -23,61 +23,7 @@ table td{
     background:#FC6;
     }
 </style>
-<script type="text/javascript" language="javascript">
-function gehang(){
-    //获取tr节点
-    var tr=document.getElementsByTagName("tr");
-    //为第一行添加背景颜色
-       tr[0].style.background="#00FF66";
-       //为最后一行添加背景颜色
-       tr[tr.length-1].style.background="#00FF66";
-                }
-    //创建全选反选函数
-    function xuan(type){
-        //获取name值
-        var qcheck=document.getElementsByName("check[]");
-        //获取选的按钮
-        if(type=="qx"){
-            for(var i=0;i<=qcheck.length;i++){
-                qcheck[i].checked=true;
-                                             }
-                      }
-            if(type=="fx"){
-            for(var i=0;i<=qcheck.length;i++){
-                qcheck[i].checked=false;
-                                              }
-                          }
-           
-            if(type=="qxx"){
-            for(var i=0;i<=qcheck.length;i++){
-                 if(qcheck[i].checked){
-           qcheck[i].checked=false;
-                                     }
-                                  else{
-           qcheck[i].checked=true;
-        
-            }
-                }
-            }
-        }
-        function del(){
-            var input=document.getElementsByName("check[]");
-            for(var i=input.length-1; i>=0;i--){
-                   if(input[i].checked==true){
-                       //获取td节点
-                       var td=input[i].parentNode;
-                      //获取tr节点
-                      var tr=td.parentNode;
-                      //获取table
-                      var table=tr.parentNode;
-                      //移除子节点
-                      table.removeChild(tr);
-                 }
-               
-                }
-       
-            }
-</script>
+    <script src="JavaScript.js"></script>
 </head>
 <body onload="gehang()">
 
@@ -152,9 +98,5 @@ function gehang(){
 		</td>
 	</tr>
 </table>
-<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
-<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
-</div>
 </body>
 </html>
