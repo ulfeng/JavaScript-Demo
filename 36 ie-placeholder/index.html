@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=9" >
+    <![endif]-->
+    <meta name="description" content="ie-placeholder example">
+    <meta name="author" content="Stéfano Stypulkowski Zanata">
+    
+    <title>Stéfano Zanata</title>
+    
+    <style>
+      body{
+        background:#efefed;
+        text-align:center;
+      }
+      h1{
+        font-family:arial;
+        color:#333;
+        text-shadow:1px 0px 0px #fff;
+      }
+      textarea,
+      input{
+        display:block;
+        width:400px;
+        font-size:18px;
+        padding:10px;
+        color:#333;
+        margin:5px auto;
+        border:1px solid #aaa;
+        border-radius:3px;
+        outline:none;
+        font-family:arial;
+        box-shadow:inset 0px 0px 4px #ccc;
+      }
+      textarea{
+        height:100px;
+        resize:none;
+      }
+      
+      .ie-placeholder{
+        color:#ccc;
+      }
+      
+    </style>
+    
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="ie-placeholder.js"></script>
+  </head>
+  <body>
+    <h1>Open this on both IE and Chrome/Firefox/Safari (HTML5 browsers) and see the same behavior for placeholders</h1>
+    
+    <input type="text" placeholder="A common text input"/>
+    <input type="password" placeholder="A password input"/>
+      <input type="password" placeholder="A password input"/>
+    <textarea placeholder="A avarage textarea"></textarea>
+  </body>
+</html>
