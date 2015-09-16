@@ -4,9 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>密码框自动登录</title>
     <style>
+        * {
+            padding:0;
+            margin:0;
+        }
         body {
             width:100%;
             height:auto;
+        }
+        li {
+            list-style:none;
         }
         #container {
             width:150px;
@@ -14,14 +21,36 @@
             color:#000;
             margin:20px auto 0; 
         }
+        #shuRu {
+            cursor:pointer;
+        }
+        #select {
+            width:60px;
+            height:auto;
+            border:1px solid #222;
+            display:none;
+        }
+        #container ul li {
+            width:100%;
+            height:30px;
+            line-height:30px;
+        }
+        #close {
+            border-top:1px solid #222;
+            cursor:pointer;
+        }
         
     </style>
     <script src="js/JavaScript.js"></script>
 </head>
 <body>
     <div id="container">
-        <button>输入法</button>
-        
+        <button id="shuRu">输入法</button>
+        <ul id="select">
+            <li>中文</li>
+            <li>英文</li>
+            <li id="close">关闭</li>
+        </ul>
 
     </div>
 

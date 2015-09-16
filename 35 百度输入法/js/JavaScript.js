@@ -1,12 +1,16 @@
 ﻿// 方法1
 window.onload = function () {
-    var check = document.getElementsByTagName("label")[0];
-    var tips = document.getElementById("tips");
-    check.onmouseover = function () {
-        tips.style.display = "block";
+    var shuRu = document.getElementById("shuRu");
+    var select = document.getElementById("select");
+    var close = document.getElementById("close");
+    var styleValue = select.style;
+
+    shuRu.onclick = function ()
+    {
+        styleValue.display = styleValue.display == "block" ? "none" : "block";  // 如果是block,则为nobe,否则为block ，三元操作符。
     }
-    check.onmouseout = function () {
-        tips.style.display = "none";
+    close.onclick = function () {
+        styleValue.display = "none";
     }
 }
 
