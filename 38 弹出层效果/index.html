@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>点击div innerHTML</title>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        body {
+            width:100%;
+            height:auto;
+        }
+        .button {
+            width: 70px;
+            height: 20px;
+            color: #000;
+            margin: 20px auto 0;
+        }
+        #overLay {
+            width:100%;
+            height:100%;
+            background:#222;
+            opacity:0.5;
+            filter:alpha(opactiy=50);
+            position:absolute;
+            display:none;
+            top:0;
+            z-index:4;
+        }
+        .box {
+            width:300px;
+            height:200px;
+            border:2px solid orange;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin:-150px 0 0 -100px;
+            display:none;
+            z-index:100;
+            background:#fff;
+        }
+        .box .tit {
+            width:100%;
+            height:30px;
+            background:yellow;
+            border-bottom:2px solid orange;
+        }
+        .box .tit p {
+            width:30px;
+            line-height:30px;
+            height:70px;
+            float:right;
+            cursor:pointer;
+        }
+        .box .con {
+            width:100%;
+            height:140px;
+        }
+
+    </style>
+    <script src="js/JavaScript.js"></script>
+</head>
+<body>
+    <div class="button">
+        <button id="openBox">弹 出 层</button>
+    </div>
+    <div id="overLay"></div>
+
+    <div class="box">
+        <div class="tit"><p id="closeBox">X</p></div>
+        <div class="con"></div>
+    </div>
+    
+</body>
+</html>
