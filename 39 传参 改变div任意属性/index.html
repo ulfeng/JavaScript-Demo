@@ -2,22 +2,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style>
-        body,p{margin:0;padding:0;}
-body{color:#333;font:12px/1.5 Tahoma;padding-top:10px;}
-#outer{width:300px;margin:0 auto;}
-p{margin-bottom:10px;}
-button{margin-right:5px;}
-label{width:5em;display:inline-block;text-align:right;}
-input{padding:3px;font-family:inherit;border:1px solid #ccc;}
-
-        #demo {
-            width:250px;
-            height:150px;
-            background:#222;
-            color:#fff;
-            font:normal 13px/16px Arial;
-            padding:10px;
-            margin:30px auto 0;
+        body, p {
+            margin:0;
+            padding:0;
+        }
+        body {
+            color:#333;
+            font:12px/1.5 Tahoma;
+            padding-top:10px;
+        }
+        #outer {
+            width:300px;
+            margin:0 auto;
+        }
+        p {
+           margin-bottom:10px;
+        }
+        button {
+            margin-right:5px;
+        }
+        label {
+            width:5em;
+            display:inline-block;
+            text-align:right;
+        }
+        input {
+            padding:3px; 
+            font-family:inherit;
+            border:1px solid #ccc;
+        }
+        #div1 {
+           color:#fff;
+           width:180px;
+           background:#000;
+           margin:0 auto;
+           padding:10px;
         }
 
     </style>
@@ -26,18 +45,12 @@ input{padding:3px;font-family:inherit;border:1px solid #ccc;}
 <body>
     
     <div id="outer">
-        <p><label>参数名:</label><input type="text" /></p>
-        <p><label>属性值:</label><input type="text" /></p>
-        <p>
-            <label></label>
-            <button id="confirm">确定</button>
-            <button id="reset">重置</button>
-        </p>
+        <p><label>属性名：</label><input value="height" type="text" /></p>
+        <p><label>属性值：</label><input value="400px" type="text" /></p>
+        <p><label></label><button>确定</button><button>重置</button></p>
     </div>
 
-    <div id="demo">
-        浔阳江头夜送客，会当凌绝顶，一览众山小。改革开放是第一生产力，我们要共同努力
-    </div>
+    <div id="div1">在上方的输入框输入"属性名"及"属性值"，点击确定，查看效果。</div>
     
 </body>
 </html>
