@@ -2,21 +2,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style>
-        
+        div, ul, li {
+            margin:0;
+            padding:0;
+        }
+        ul, li {
+            list-style:none;
+        }
+        body {
+           width:100%;
+           height:auto;
+        }
+        .container {
+            width:600px;
+            height:300px;
+            margin:0 auto;
+            border:1px solid #ccc;
+        }
+         .container ul {
+            width:600px;
+            height:50px;
+        }
+         .container ul li{
+            width:199px;
+            height:50px;
+            line-height:50px;
+            float:left;
+            border-right:1px solid #ccc;
+            text-align:center;
+        }
+         .container ul li.tab_selected{
+            color:red;
+        }
+       #mc div {
+            width:600px;
+            height:249px;
+            border-top:1px solid #ccc;
+            display:none;
+        }
+       #mc .main_selected {
+            display:block;
+        }
+
+
+
+
+
     </style>
     <script src="js/JavaScript.js"></script>
 </head>
 <body>
      <div class="container">
-         <div class="mh">
+
              <ul id="tab">
-                 <li class="tab_selected">数学</li>
+                 <li>数学</li>
                  <li>语文</li>
                  <li>英语</li>
              </ul>
-         </div>
+         
          <div id="mc">
-             <div class="main_selceted">
+             <div class="main_selected">
                  数学是XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
              </div>
              <div>
