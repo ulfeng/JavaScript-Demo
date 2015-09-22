@@ -2,55 +2,113 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style>
-        div, ul, li {
-            margin:0;
-            padding:0;
+        body, div, h2, ul, li {margin:0; padding:0;}
+        ul, li {list-style:none;}
+        body {
+            font:12px/1.5 Tahoma;
         }
-        ul, li {
-            list-style:none;
+        #outer {
+            width:560px;
+            border:1px solid #333;
+            margin:10px auto;
+            padding:0 0 10px 10px;
+        }
+        #outer h2 {
+            line-height:30px;
+            text-align:center;
+            margin-top:10px;
+        }
+        #outer ul::after {
+            content:".";
+            display:block;
+            height:0;
+            clear:both;
+            visibility:hidden;
+        }
+        #outer ul {
+            zoom:1;
+        }
+        #outer ul li {
+            position:relative;
+            float:left;
+            border:1px solid #333;
+            margin: 10px 0;
+            display:inline;    
+        }
+        #outer ul li img {
+            position:absolute;
+            top:-14px;
+            left:-14px;
+            display:none;
+            border:2px solid #999;
+            cursor:crosshair;    
+        }
+        #outer ul li a {
+            color:#666;
+            width:80px;
+            height:80px;
+            display:block;
+            background:#f0f0f0;
+            text-decoration:none;
+            padding:10px;   
+        }
+        #outer ul li a strong {
+            display:block;    
+        }
+        .zindex {
+            z-index:1;
         }
       
-        ul {
-           width:680px;
-            height:270px;
-            margin:0 auto;
-            padding:20px;
-            border:2px solid #ccc;
-            color:#fff;
-            font:bold 15px/128px Arial;
-        }
-        li {
-            width:128px;
-            height:128px;
-            border:1px solid #ccc;
-            float:left;
-            margin-left:5px;
-            margin-bottom:5px;
-            cursor:crosshair;
-            background:#ccc;
-            text-align:center;
-        }
-            /*li:hover {
-                opacity:1;
-            }*/
-        .clear {
-            clear:both;
-        }
     </style>
     <script src="js/JavaScript.js"></script>
 </head>
 <body>
+    <div id="outer">
+        <h2>名车车标展示-鼠标经过显示车标</h2>
         <ul>
-            <li>XXXXXXX</li>
-            <li>XXXXXXX</li>
-            <li>XXXXXXX</li>
-            <li>XXXXXXX</li>
-            <li>XXXXXXX</li>
-            <li class="clear">XXXXXXX</li>
-            <li>XXXXXXX</li>
-            <li>XXXXXXX</li>
-            <li>XXXXXXX</li>
-            <li>XXXXXXX</li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/1.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/2.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/3.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/4.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/5.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/6.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/7.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/8.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/9.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            <li class="">
+                <a href="#" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+                <img src="images/10.jpg" alt="BMW 宝马汽车" style="display:none;" />
+            </li>
+            
         </ul>
+    </div>
+        
 </body>
 </html>
