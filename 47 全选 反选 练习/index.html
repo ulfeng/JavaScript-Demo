@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        div, ul, li {
+            margin:0;
+            padding:0;
+        }
+        ul, li {
+            list-style:none;
+        }
+        body {
+           width:100%;
+           height:auto;
+           color:#222;
+           font:normal 13px/13px Arial;
+        }
+        div {
+           width:100px;
+           height:370px;
+           margin:20px auto 0;
+           padding:15px;
+           border:1px solid #222;
+           border-radius:4px;
+        }
+        div p {
+            height:40px;
+            border-bottom:1px solid #222;
+        }
+        ul li {
+            height:30px;
+        }
+        #fSelect {
+            color:#f00;
+            margin-left:10px;
+        }
+        #allSelect, #fSelect {
+            cursor:pointer;
+        }
+        .note {
+        border:none;
+        width:350px;
+        }
+
+
+    </style>
+    <script src="js/JavaScript.js"></script>
+</head>
+<body>
+     <div>
+         <p><span id="allSelect"><input type="checkbox" />全选</span><span id="fSelect">反选</span></p>
+         <ul>
+             <li><input type="checkbox" />选项(一)</li>
+             <li><input type="checkbox" />选项(二)</li>
+             <li><input type="checkbox" />选项(三)</li>
+             <li><input type="checkbox" />选项(四)</li>
+             <li><input type="checkbox" />选项(五)</li>
+             <li><input type="checkbox" />选项(六)</li>
+             <li><input type="checkbox" />选项(七)</li>
+             <li><input type="checkbox" />选项(八)</li>
+             <li><input type="checkbox" />选项(九)</li>
+             <li><input type="checkbox" />选项(十)</li>
+         </ul>
+     </div>
+     <div class="note">1、切换全选/全不选文字;2、根据选中个数更新全选框状态;</div>
+</body>
+</html>
