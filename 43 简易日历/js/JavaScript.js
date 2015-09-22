@@ -1,7 +1,7 @@
 ﻿// 方法1
 window.onload = function () {
     var oLi = document.getElementById("calendar").getElementsByTagName("li");
-    var note = document.getElementById("note");
+    var oNote = document.getElementById("note");
     var arr = ["1 月节日元旦：1月1日至3日放假三天。",
                "2 月节日元旦：1月1日至3日放假三天。",
                "3 月节日元旦：1月1日至3日放假三天。",
@@ -20,7 +20,7 @@ window.onload = function () {
         oLi[i].index = i;
         oLi[i].onmouseover = function () {
             for (var n = 0; n < oLi.length; n++) {
-                note.innerHTML = arr[this.index];
+                oNote.innerHTML = arr[this.index];
             }
         }
     }
