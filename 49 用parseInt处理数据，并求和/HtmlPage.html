@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>用parseInt处理数据，并求和</title>
+    <style>
+        .sum {
+           width:600px;
+           height:auto;
+           margin:20px auto 0;
+           color:#000;
+           font:normal 13px/13px Arial;
+        }
+        .sum input {
+           width:70px;
+           height:auto;
+           display:inline-block;
+        }
+        .sum span {
+           width:30px;
+           display:inline-block;
+           color:#f00;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oInput = document.getElementsByTagName("input");
+            var oBtn = document.getElementsByTagName("button");
+            var oSapn=document.getElementsByTagName("span");
+            for (var i = 0; i < oInput.length; i++) {
+                oInput[i].onkeyup = function () {
+                    this.value = this.value.replace(/[`\d]/, ""); // 将不为数字的替换为空
+                }
+            }
+
+            oBtn[0].onclick = function () {
+                if (oInput[0].value == "" || oInput[1].value == "") {
+                    alert("xX");
+                }
+                else {
+                    var sum = 0;
+                    for (var i = 0; i < oInput.length; i++) {
+                        sum += parseInt(oInput[i].value);
+                    }
+                    oSapn[0].innerHTML = sum;
+                }
+                
+            }
+        }
+       
+    </script>
+</head>
+<body>
+    <div class="sum">
+        <input type="text" />
+        &nbsp;&nbsp;+ &nbsp;&nbsp;
+        <input type="text" />
+        &nbsp;&nbsp;=
+        <span>?</span>
+        <button>求和</button>
+    </div>
+</body>
+</html>

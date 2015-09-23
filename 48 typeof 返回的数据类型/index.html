@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>typeof 返回数据类型</title>
+</head>
+<body>
+    <script>
+        // typeof 返回类型有5种，number boolean object function undefined
+        document.write("typeof(1):" + typeof (1) + "<br>");     // number
+        document.write("typeof(NaN)" + typeof (NaN) + "<br>");   // number
+        document.write("typeof(Number.MIN_VALUE)" + typeof (Number.MIN_VALUE) + "<br>");   // number
+        document.write("typeof(123)" + typeof (123) + "<br>");   // number
+        document.write("typeof(true)" + typeof (true) + "<br>");  // boolean
+        document.write("typeof(window)" + typeof (window) + "<br>");  // object
+        document.write("typeof(document)" + typeof (document) + "<br>"); //object
+        document.write("typeof(null)" + typeof (null) + "<br>");   // object
+        document.write("typeof(eval)" + typeof (eval) + "<br>");   // function
+        document.write("typeof(Date)" + typeof (Date) + "<br>");   // function
+        document.write("typeof(sss)" + typeof (sss) + "<br>");     // undefined
+        document.write("typeof(undefined)" + typeof (undefined) + "<br>");   // undefined
+    </script>
+</body>
+</html>
