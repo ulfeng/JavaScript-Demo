@@ -13,12 +13,29 @@ window.onload = function () {
     };
 
     // 全选/全不选
-    aSelect.onclick = function () {
+    oInput[0].onclick = function () {
         for (var i = 0; i < oInput.length; i++) {
             oInput[i].checked = this.checked;
         }
         isCheckAll();
     }
+
+    // 反选
+    fSelcet.onclick = function () {
+        for (var i = 1; i < oInput.length; i++) {
+            oInput[i].checked = !oInput[i].checked;
+        }
+        isCheckAll();
+    }
+
+    // 根据复选个数更新全选框状态
+    //for (var i = 1; i < oInput.length; i++) {
+    //    oInput[i].onclick = function () {
+    //        isCheckAll();
+    //    }
+    //}
+
+
 }
 
 // 方法2：
