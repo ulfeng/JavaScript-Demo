@@ -29,13 +29,13 @@
             var oSapn=document.getElementsByTagName("span");
             for (var i = 0; i < oInput.length; i++) {
                 oInput[i].onkeyup = function () {
-                    this.value = this.value.replace(/[`\d]/, ""); // 将不为数字的替换为空
+                    this.value = this.value.replace(/[^\d]/, ""); // 将不为数字的替换为空
                 }
             }
 
             oBtn[0].onclick = function () {
                 if (oInput[0].value == "" || oInput[1].value == "") {
-                    alert("xX");
+                    alert("输入框不能为空，请输入数字！");
                 }
                 else {
                     var sum = 0;
