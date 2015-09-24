@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>用parseInt处理数据，并求和</title>
+    <style>
+        .sum {
+           width:600px;
+           height:auto;
+           margin:20px auto 0;
+           color:#000;
+           font:normal 13px/13px Arial;
+        }
+        .sum input {
+           width:70px;
+           height:auto;
+           display:inline-block;
+        }
+        .sum span {
+           width:auto;
+           display:inline-block;
+           color:#f00;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oInput = document.getElementsByTagName("input");
+            var oBtn = document.getElementsByTagName("button");
+            var oSpan=document.getElementsByTagName("span");
+            for (var i = 0; i < oInput.length; i++) {
+                oInput[i].onkeyup = function () {
+                    this.value = this.value.replace(/[^\d]/, ""); // 将不为数字的替换为空
+                }
+            }
+
+            oBtn[0].onclick = function () {
+                //if (oInput[0].value == "" || oInput[1].value == "") {
+                //    alert("输入框不能为空，请输入数字！");
+                //}
+                //else {
+                //    if (oInput[0].value > oInput[1].value) {
+                //        oSpan[0].innerHTML == oInput[0].value + "比较大！";
+                //    }
+                //    if (oInput[0].value = oInput[1].value) {
+                //        oSpan[0].innerHTML = "两个数一样大！";
+                //    }
+                //    else {
+                //        oSpan[0].innerHTML = oInput[1].value + "比较大！";
+                //    }
+                //}
+                (oInput[0].value == "" || oInput[1].value == "") ?
+                alert("请输入数字!") :
+                (oSpan[0].innerHTML = Math.max(oInput[0].value, oInput[1].value));
+            }
+        }
+       
+    </script>
+</head>
+<body>
+    <div class="sum">
+        <input type="text" />
+        &nbsp;&nbsp;VS &nbsp;&nbsp;
+        <input type="text" />
+        &nbsp;&nbsp;
+        <button>最大的数是》》</button>
+         <span>?</span>
+    </div>
+</body>
+</html>
