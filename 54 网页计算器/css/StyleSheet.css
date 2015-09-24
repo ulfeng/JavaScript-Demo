@@ -1,0 +1,66 @@
+﻿body, div, p, ul, li, input {
+            margin:0;
+            padding:0;
+        }
+        ul {
+            list-style-type:none;
+        }
+        a {
+            color:#fff;
+            outline:none;
+            text-decoration:none;
+        }
+        body {
+            font:700 24px/1.5 Arial;
+        }
+        #calc {
+            position:relative;
+            width:300px;
+            background:#000;
+            margin:10px auto;
+        }
+        #calc .f-text {
+            border:0;width:290px;height:84px;text-align:right;font:700 50px/84px Arial;background:url(inuptBg.jpg) repeat-x;padding:0 5px;
+        }
+        #calc ul {
+            position:relative; overflow:hidden; zoom:1;background:url(bg.jpg); padding: 0 0 17px 8px;
+        }
+        #calc ul li {
+            float:left;width:63px;height:41px;line-height:41px;margin:17px 10px 0 0;
+        }
+        #calc ul li a {
+            float:left;width:63px;height:41px;line-height:41px;text-align:center;background:url(btn.png) no-repeat;
+        }
+        #calc ul li a:hover {
+            background-position:-63px 0;
+        }
+        #clac ul li.btn-1 a {
+            background-position:0 -41px;
+        }
+        #clac ul li.btn-1 a:hover {
+            background-position:-63px -41px;
+        }
+        #clac ul li.btn-2{
+            position:absolute;top:174px;right:0;height:99px;
+        }
+        #clac ul li.btn-2 a{
+            height:99px; line-height:99px;background-position:0 -164px;
+        }
+        #clac ul li.btn-2 a:hover{
+            background-position:-63px -164px;
+        }
+        #clac ul li.btn-3{
+            width:136px;
+        }
+        #clac ul li.btn-3 a{
+            width:136px;background-position:0 -82px;
+        }
+        #clac ul li.btn-3 a:hover{
+            background-position:0 -123px;
+        }
+        #formula {
+            position:absolute;top:20px;background:none;border:0;font:700 12px/1.5 Arial;
+        }
+input {
+color:#fff;
+}
