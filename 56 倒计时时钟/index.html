@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>倒计时时钟</title>
+    <style>
+        div {
+            margin:10px;
+            padding:0;
+        }
+        .clock {
+            width:300px;
+            height:100px;
+            margin:0 auto;
+            padding:20px;
+            background:#000;
+            color:#fff;
+            font:normal 13px/20px Arial;
+        }
+        .clock span {
+            display:inline-block;
+            width:30px;
+            height:20px;
+            background:#fff;
+            border:1px solid #ccc;
+            color:#000;
+        }
+        .clock button {
+            display:block;
+            width:283px;
+            height:50px;
+            background:url(btn-1.png) no-repeat;
+            border:none;
+        }
+        .clock button.cancel {
+            background-position:0 -50px;
+        }
+    </style>
+    <script src="JavaScript.js"></script>
+</head>
+<body>
+    <div class="clock">
+        <span>01</span>分
+        <span>34</span>秒
+        <button class=""></button>
+    </div>
+</body>
+</html>
