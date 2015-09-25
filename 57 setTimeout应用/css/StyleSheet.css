@@ -1,21 +1,15 @@
-﻿body, div, ul, li {
-    margin:0;
-    padding:0;
-}
-ul, li {
-    list-style:none;      
-}
-.nav {
-    width:864px;
-    height:36px;
-    margin:10px auto 0;
-    color:#fff;
-    font:normal 13px/36px Arial;
-}
-.nav li {
-    width:108px;
-    height:36px;
-    float:left;
-    text-align:center;
-    background:url(../images/nav_bg.png) no-repeat 0 -36px;
-}
+﻿body,div,ul,li,p{margin:0;padding:0;}
+body{font:12px/1.5 Arial;}
+ul{list-style-type:none;}
+#nav,#nav ul,#nav ul li,#nav ul li a:hover,#nav .subnav,#nav .subnav p,#nav .subnav p span,#nav .subnav .arrow{background:url(../images/nav_bg.png) no-repeat;}
+#nav{position:relative;width:910px;background-position:0 -36px;margin:10px auto;}
+#nav ul{height:36px;line-height:36px;margin-left:10px;padding-right:10px;overflow:hidden;background-position:right -72px;}
+#nav ul li{float:left;width:110px;margin-left:-2px;background-position:0 -108px;}
+#nav ul li a{font-size:14px;color:#fff;width:102px;display:block;text-align:center;text-decoration:none;margin:0 2px 0 4px;}
+#nav ul li a:hover{font-weight:700;background-position:-3px -144px;}
+#nav .subnav{display:none;position:absolute;top:41px;width:auto!important;min-width:110px;height:27px;line-height:27px;white-space:nowrap;background-position:0 -180px;}
+#nav .subnav p{margin-left:10px;padding-right:10px;background-position:right -234px;}
+#nav .subnav p span{display:block;color:#235e99;background-repeat:repeat-x;background-position:0 -207px;}
+#nav .subnav p a{font-size:12px;display:inline;color:#235e99;text-decoration:none;margin:0 5px;padding:0 2px;}
+#nav .subnav p a:hover{font-weight:400;background-image:none;border-bottom:2px solid;}
+#nav .subnav .arrow{position:absolute;top:-4px;display:block;width:11px;height:5px;background-position:0 -261px;}
