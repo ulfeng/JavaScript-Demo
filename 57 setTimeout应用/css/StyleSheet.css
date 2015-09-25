@@ -1,0 +1,21 @@
+﻿body, div, ul, li {
+    margin:0;
+    padding:0;
+}
+ul, li {
+    list-style:none;      
+}
+.nav {
+    width:864px;
+    height:36px;
+    margin:10px auto 0;
+    color:#fff;
+    font:normal 13px/36px Arial;
+}
+.nav li {
+    width:108px;
+    height:36px;
+    float:left;
+    text-align:center;
+    background:url(../images/nav_bg.png) no-repeat 0 -36px;
+}
