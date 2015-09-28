@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>事件练习：封装兼容性添加、删除事件的函数</title>
+    <script>
+        var EventUtil = {
+            addHandler: function (oElement, sEvent, fnHandler) {
+                oElement.addEventListener ? oElement.addEventListener(sEvent, fnHandler, false) : oElement.attchEvent("on" + sEvent, fnHandler)
+            },
+            removeHandler: function (oElement, sEvent, fnHandler) {
+                oElement.removeEventListener ? oElement.removeEventListener(sEvent, fnHandler, false) : oElement.detachEvent("on" + sEvent, fnHandler)
+            },
+            addLoadHandler: function (fnHandler) {
+                this.addHandler(window, "load", fnHandler);
+            }
+        };
+
+        EventUtil.addLoadHandler(function () {
+            var aBtn = document.getElementsByTagName("input");
+
+            // 为第一个按钮添加绑定事件
+            EventUtil.addHandler(aBtn[1], "click", function () {
+                EventUtil.addHandler(aBtn[0], "click", fnHandler);
+                aBtn[0].value = "我可以点击了"
+            });
+
+            // 解除第一个按钮的绑定事件
+            EventUtil.addHandler(aBtn[2], "click", function () {
+                EventUtil.removeHandler(aBtn[0], "click", fnHandler);
+                aBtn[0].value = "毫无用处的按钮"
+            });
+
+            // 事件处理函数
+            function fnHandler() {
+                alert("事件绑定成功！");
+            }
+
+
+
+        })
+    </script>
+</head>
+<body>
+    <input value="毫无用处的按钮" type="button"> <input value="绑定click" type="button"> <input value="解除绑定" type="button">
+</body>
+</html>
