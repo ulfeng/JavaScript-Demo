@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>arguments应用-求出函数参数总和</title>
+</head>
+<body>
+    <script>
+        function sum() {
+            var i, sum = 0;
+            for (i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            alert(sum);
+        }
+        window.onload = function () {
+            sum(1, 2, 3, 4, 5, 6,7,2);
+        }
+    </script>
+</body>
+</html>

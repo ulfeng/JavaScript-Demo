@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>arguments应用-求出函数参数总和</title>
+    <style>
+        #container {
+             width:400px;
+             height:300px;
+             border:1px solid #000;
+             background:#ff6a00;
+             margin:0 auto;
+             color:#222;
+             font:13px/20px Arial;
+        }
+        input {
+            display:inline-block;
+            margin:10px 20px 0;
+            background:#fff;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oCon = document.getElementById("container");
+            var oBtn = document.getElementsByTagName("input");
+            var conWidth = oCon.style.width;
+            var conHeight = oCon.style.height;
+            var conColor = oCon.style.backgroundColor;
+
+            oBtn[0].onclick = function () {
+                alert(conWidth);
+            }
+
+            oBtn[1].onclick = function () {
+                oCon.style.cssText="width:300px; height:250px;"
+            }
+
+            oBtn[2].onclick = function () {
+                oCon.style.cssText = "width:400px; height:300px;"
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <input type="button" value="getValue" />
+        <input type="button" value="setValue" />
+        <input type="button" value="defalutValue" />
+    </div>
+
+</body>
+</html>
