@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>单击显示当前坐标</title>
+    <script>
+        document.onclick = function () {
+            var event = event || window.event;
+            alert("坐标[" + event.clientX + "," + event.clientY + "]");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
