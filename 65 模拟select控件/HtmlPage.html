@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>模拟select控件</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        input {
+            cursor:pointer;
+        }
+        ul {
+            width:173px;
+            height:auto;
+            list-style-type:none;
+            cursor:pointer;
+            display:none;
+        }
+        li {
+            border:1px solid #222;
+            border-top:none;
+        }
+        div {
+            width:500px;
+            height:auto;
+            margin:0 auto;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oInput = document.getElementsByTagName("input")[0];
+            var oUl = document.getElementsByTagName("ul")[0];
+            var oLi = document.getElementsByTagName("li");
+            var style = oUl.style;
+            var i;
+            oInput.onclick = function () {
+                style.display = style.display == "none" ? "block" : "none";
+            }
+
+            for (i = 0; i < oLi.length; i++) {
+                oLi[i].onclick = function () {
+                    style.display = "none";
+                    oInput.value = this.innerHTML;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" value="请选择" />
+    <ul>
+        <li>X</li>
+        <li>XX</li>
+        <li>XXX</li>
+        <li>XXXX</li>
+    </ul>
+    </div>
+    
+</body>
+</html>
