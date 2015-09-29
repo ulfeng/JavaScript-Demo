@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>用户按下键盘，显示keycode</title>
+    <script>
+        window.onload = function () {
+            var oH2 = document.getElementsByTagName("h2")[0];
+            document.onkeydown = function () {
+                var event = event || window.event;
+                oH2.innerHTML = event.keyCode;
+                return false;        // retrun true； 返回正确的处理结果。
+
+                // return false；分会错误的处理结果，终止处理。
+
+               // return；把控制权返回给页面。
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h2></h2>
+</body>
+</html>
