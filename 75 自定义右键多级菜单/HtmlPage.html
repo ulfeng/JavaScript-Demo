@@ -3,9 +3,80 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>自定义右键多级菜单</title>
+    <style type="text/css">
+html,body{height:100%;overflow:hidden;}
+body,ul{margin:0;padding:0;}
+body{font:12px/1.5 \5fae\8f6f\96c5\9ed1;}
+ul{list-style-type:none;}
+#rightMenu{position:absolute;top:-9999px;left:-9999px;}
+#rightMenu ul{float:left;border:1px solid #979797;padding:2px;box-shadow:2px 2px 2px rgba(0,0,0,.6);}
+#rightMenu ul li{float:left;clear:both;height:24px;cursor:pointer;line-height:24px;white-space:nowrap;padding:0 30px;}
+#rightMenu ul li.sub{background-repeat:no-repeat;background-position:right 9px;}
+#rightMenu ul li.active{background-color:#f1f3f6;border-radius:3px;border:1px solid #aecff7;height:22px;line-height:22px;padding:0 29px;}
+#rightMenu ul ul{display:none;position:absolute;}
+</style>
     <script src="JavaScript.js"></script>
 </head>
 <body>
+    <h2>自定义右键菜单，请在页面点击右键查看效果</h2>
+    <div id="rightMenu">
+        <ul>
+            <li class=""><strong>JavaScript 学习</strong></li>
+            <li class="sub">
+                第一课
+                <ul>
+                    <li>网页特效原理分析</li>
+                    <li>响应用户操作</li>
+                    <li>提示框效果</li>
+                    <li>事件驱动</li>
+                    <li>元素属性操作</li>
+                </ul>
+            </li>
+            <li class="sub">
+                第二课
+                <ul>
+                    <li>改变网页背景颜色</li>
+                    <li>函数传参</li>
+                    <li>高重用性函数的编写</li>
+                    <li>126邮箱全选效果</li>
+                    <li>循环及遍历操作</li>
+                </ul>
+            </li>
+            <li class="sub">
+                第三课
+                <ul>
+                    <li class="sub">
+                        JavaScript组成
+                        <ul>
+                            <li>ECMAScript</li>
+                            <li>DOM</li>
+                            <li>BOM</li>
+                            <li>JavaScript兼容性来源</li>
+                        </ul>
+                    </li>
+                    <li style="width: 265px;">JavaScript出现的位置、优缺点</li>
+                    <li style="width: 265px;">变量、类型、typeof、数据类型转换、变量作用域</li>
+                    <li style="width: 265px;" class="sub">
+                	    闭包
+                        <ul>
+                            <li>什么是闭包</li>
+                            <li>简单应用</li>
+                            <li>闭包缺点</li>
+                        </ul>
+                    </li>
+                    <li style="width: 265px;">运算符</li>
+                    <li style="width: 265px;">程序流程控制</li>
+                    <li style="width: 265px;" class="sub">
+                        定时器的使用
+                        <ul>
+                            <li>setInterval</li>
+                            <li>setTimeout</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
 
+        </ul>
+    </div>
 </body>
 </html>
