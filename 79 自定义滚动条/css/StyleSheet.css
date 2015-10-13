@@ -1,1 +1,69 @@
-﻿
+﻿body,div,ul,li,p{margin:0;padding:0;}
+body{background:#3e3e3e;font:14px/1.5 \5fae\8f6f\96c5\9ed1;}
+#box {
+    width:600px;
+    margin:20px auto;
+}
+.list {
+    width:600px;
+    height:144px;
+    margin-bottom:10px;
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+}
+.list ul {
+    position:absolute;
+    top:0;
+    left:0;
+    height:144px;
+}
+.list li {
+    display:inline;
+    float:left;
+    width:144px;
+    height:144px;
+    list-style:none;
+    background:#000;
+    margin:0 6px 0 0;
+    border-radius:8px;
+}
+.list li img {
+    float:left;
+    width:124px;
+    height:100px;border-radius:5px;
+    margin:10px 0 0 10px;
+}
+.list li p {
+    float:left;
+    color:#fff;
+    width:100%;
+    text-align:center;line-height:34px;
+}
+.scrollBar {
+    position:relative;
+    height:19px;background:#0a0a0a;
+    overflow:hidden;
+}
+.scrollBar .barL, .scrollBar .barR, .scrollBar .barLStop, .scrollBar .barRStop {
+    position:absolute;
+    top:0;
+    width:28px;
+    height:19px;
+    cursor:pointer;
+    background:url(../images/03.gif) no-repeat;
+}
+.scrollBar .barL {
+    left:0;
+}
+.scrollBar .barR{right:0;background-position:right 0;}
+.scrollBar .barLStop{left:0;background-position:0 -19px;cursor:default;}
+.scrollBar .barRStop{right:0;background-position:right -19px;cursor:default;}
+.scrollBar .barM{position:relative;height:15px;border:1px solid #545454;border-width:1px 0;margin:0 28px;padding:1px 0;z-index:1;cursor:pointer;}
+.scrollBar .bar{position:absolute;top:1px;left:0;width:150px;height:15px;cursor:e-resize;background:url(../images/01.gif) repeat-x;}
+.scrollBar .bar .l,.scrollBar .bar .r{position:absolute;top:0;width:6px;height:15px;background:url(../images/02.gif) no-repeat;}
+.scrollBar .bar .l{left:-6px;}
+.scrollBar .bar .r{right:-6px;background-position:right 0;}
+#desc{color:#ccc;width:578px;padding:10px;margin:0 auto;line-height:2;border:1px dashed #666;}
+#desc dd{margin-left:2em;}
+.ta-r{text-align:right;}
