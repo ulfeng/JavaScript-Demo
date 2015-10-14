@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>模拟表单控件</title>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <script src="js/JavaScript.js"></script>
+</head>
+<body>
+    <form class="WellForm">
+        <div class="item">
+            <label>姓名:</label>
+            <div class="TextL"></div>
+            <input class="WellText" name="name" type="text" />
+            <div class="TextR"></div>
+        </div>
+        <div class="item">
+            <label>电话:</label>
+            <div class="TextL"></div>
+            <input class="WellText" name="tel" type="text" />
+            <div class="TextR"></div>
+        </div>
+        <div class="item">
+            <label>性别:</label>
+            <div class="TextL"></div>
+            <div class="WellSelect">
+                <em>女孩</em>
+                <ul>
+                    <li>男孩</li>
+                    <li>女孩</li>
+                    <li>人妖</li>
+                </ul>
+                <select name="sex">
+                    <option value="男孩">男孩</option>
+                    <option value="女孩" selected="selected">女孩</option>
+                    <option value="人妖">人妖</option>                    
+                </select>
+            </div>
+            <div class="TextR"></div>
+        </div>
+        <div class="item">
+            <label>生日:</label>
+
+            <div class="TextL"></div>
+            <div class="WellSelect">
+                <em>7月</em>
+                <ul>
+                    <li>1月</li>
+                    <li>2月</li>
+                    <li>3月</li>
+                    <li>4月</li>
+                    <li>5月</li>
+                    <li>6月</li>
+                    <li>7月</li>
+                    <li>8月</li>
+                    <li>9月</li>
+                    <li>10月</li>
+                    <li>11月</li>
+                    <li>12月</li>
+                </ul>
+                <select name="month">
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option> 
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option> 
+                    <option value="7" selected="selected">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option> 
+                    <option value="12">12月</option>                 
+                </select>
+            </div>
+            <div class="TextR"></div>
+
+            <div class="TextL"></div>
+            <div class="WellSelect">
+                <em>6号</em>
+                <ul>
+                    <li>1号</li>
+                    <li>2号</li>
+                    <li>3号</li>
+                    <li>4号</li>
+                    <li>5号</li>
+                    <li>6号</li>
+                </ul>
+                <select name="day">
+                    <option value="1">1号</option>
+                    <option value="2">2号</option>
+                    <option value="3">3号</option>
+                    <option value="4">4号</option>
+                    <option value="5">5号</option>
+                    <option value="6" selected="selected">6号</option>
+                </select>
+            </div>
+            <div class="TextR"></div>
+
+            <div class="TextL"></div>
+            <div class="WellSelect">
+                <em>2010年</em>
+                <ul>
+                    <li>2005年</li>
+                    <li>2006年</li>
+                    <li>2007年</li>
+                    <li>2008年</li>
+                    <li>2009年</li>
+                    <li>2010年</li>
+                    <li>2011年</li>
+                    <li>2012年</li>
+                    <li>2013年</li>
+                    <li>2014年</li>
+                    <li>2015年</li>
+                </ul>
+                <select name="year">
+                    <option value="2005">2005年</option>
+                    <option value="2006">2006年</option>
+                    <option value="2007">2007年</option>
+                    <option value="2008">2008年</option>
+                    <option value="2009">2009年</option>
+                    <option value="2010" selected="selected">2010年</option>
+                    <option value="2011">2011年</option>
+                    <option value="2012">2012年</option>
+                    <option value="2013">2013年</option>
+                    <option value="2014">2014年</option>
+                    <option value="2015">2015年</option>
+                </select>
+            </div>
+            <div class="TextR"></div>
+
+        </div>
+        <div class="item">
+            <label>婚姻:</label>
+            <div class="WellRadio">
+                <input name="marry" value="已婚" type="radio" />
+            </div>
+            <pre>已婚</pre>
+        </div>
+    </form>
+</body>
+</html>
