@@ -1,2 +1,83 @@
-﻿body {
-}
+﻿*{margin:0;padding:0;}
+.WellForm{font-size:12px;font-family:arial;line-height:21px;}
+.WellForm pre{float:left;margin-right:10px;}
+/*background*/
+.WellForm .TextL,.WellForm .TextR,.WellForm .WellText,
+.WellForm .SelectL,.WellForm .SelectR,.WellForm .WellSelect,
+.WellForm .WellTextArea .T,
+.WellForm .WellTextArea .T .TL,
+.WellForm .WellTextArea .T .TM,
+.WellForm .WellTextArea .B,
+.WellForm .WellTextArea .B .BL,
+.WellForm .WellTextArea .B .BM,
+.WellForm .WellRadio,
+.WellForm .WellCheckBox,
+.WellForm .ButtonL,.WellForm .ButtonR,.WellForm .WellButton
+{background:url(../images/WellForm.gif) no-repeat;}
+/*WellText*/
+.WellForm .TextL,.WellForm .TextR,.WellForm .WellText{float:left;width:5px;height:21px;}
+.WellForm .TextL{background-position:0 0;}.WellForm .TextR{background-position:right 0;}
+.WellForm .TextLH{background-position:0 -21px;}.WellForm .TextRH{background-position:right -21px;}
+.WellForm .WellText{border:0;width:auto;height:17px;padding:2px 0;padding:3px 0 1px\9;*padding:3px 0 1px;font-family:arial;background-repeat:repeat-x;background-position:0 -42px;}
+.WellForm .WellTextH{background-position:0 -63px;}
+/*WellSelect*/
+.WellForm .SelectL,.WellForm .SelectR,.WellForm .WellSelect{float:left;height:21px;}
+.WellForm .SelectL{width:3px;background-position:0 -84px;}
+.WellForm .SelectR{width:16px;cursor:pointer;background-position:right -84px;margin-right:5px;}
+.WellForm .WellSelect{position:relative;cursor:pointer;background-repeat:repeat-x;background-position:0 -105px;}
+.WellForm .WellSelect select{display:none;}
+.WellForm .WellSelect em{position:absolute;top:0;left:3px;color:#fff;height:21px;display:block;line-height:21px;font-style:normal;}
+.WellForm .WellSelect ul{list-style-type:none;position:absolute;top:18px;left:0;z-index:1000;display:none;background:#6C6D70;}
+.WellForm .WellSelect ul li {color:#fff;height:20px;cursor:pointer;line-height:20px;padding-left:3px;}
+.WellForm .WellSelect ul li.hover{background:#333;}
+/*WellTextArea*/
+.WellForm .WellTextArea{float:left;}
+.WellForm .WellTextArea .T,
+.WellForm .WellTextArea .T .TL,
+.WellForm .WellTextArea .T .TM,
+.WellForm .WellTextArea .B,
+.WellForm .WellTextArea .B .BL,
+.WellForm .WellTextArea .B .BM
+{height:5px;overflow:hidden;}
+.WellForm .WellTextArea .T{float:left;width:100%;background-position:right -126px;}
+.WellForm .WellTextArea .TH{float:left;width:100%;background-position:right -131px;}
+.WellForm .WellTextArea .T .TL{background-position:0 -126px;}
+.WellForm .WellTextArea .TH .TL{background-position:0 -131px;}
+.WellForm .WellTextArea .T .TM{margin:0 5px;background-repeat:repeat-x;background-position:0 -136px;}
+.WellForm .WellTextArea .TH .TM{margin:0 5px;background-repeat:repeat-x;background-position:0 -141px;}
+.WellForm .WellTextArea .B{float:left;width:100%;background-position:right -146px;}
+.WellForm .WellTextArea .BH{float:left;width:100%;background-position:right -151px;}
+.WellForm .WellTextArea .B .BL{background-position:0 -146px;}
+.WellForm .WellTextArea .BH .BL{background-position:0 -151px;}
+.WellForm .WellTextArea .B .BM{margin:0 5px;background-repeat:repeat-x;background-position:0 -156px;}
+.WellForm .WellTextArea .BH .BM{margin:0 5px;background-repeat:repeat-x;background-position:0 -161px;}
+.WellForm .WellTextArea .M,
+.WellForm .WellTextArea .M .MR
+{float:left;background:url(WellForm/TextArea-1.gif) repeat-y;}
+.WellForm .WellTextArea .M{background-position:0 0;}
+.WellForm .WellTextArea .M .MR{background-position:right 0;}
+.WellForm .WellTextArea .MH,
+.WellForm .WellTextArea .MH .MR
+{float:left;background:url(WellForm/TextArea-2.gif) repeat-y;}
+.WellForm .WellTextArea .MH{background-position:0 0;}
+.WellForm .WellTextArea .MH .MR{background-position:right 0;}
+.WellForm .WellTextArea textarea{float:left;border:0;margin:0 5px;overflow:auto;background:url(WellForm/TextArea.gif);font-family:arial;font-size:12px;resize:none;}
+/*WellRadio*/
+.WellForm .WellRadio{float:left;width:13px;height:13px;cursor:pointer;overflow:hidden;margin:4px 5px 0 0;background-position:-15px -270px;}
+.WellForm .WellRadioH{background-position:-15px -284px;}
+.WellForm .WellRadio input{margin-top:13px;display:none;}
+/*WellCheckBox*/
+.WellForm .WellCheckBox{float:left;	width:12px;height:12px;cursor:pointer;overflow:hidden;margin:4px 5px 0 0;background-position:0 -270px;}
+.WellForm .WellCheckBoxH{background-position:0 -283px;}
+.WellForm .WellCheckBox input{margin-top:12px;display:none;}
+/*WellButton*/
+.WellForm .ButtonL,.WellForm .ButtonR,.WellForm .WellButton{cursor:pointer;float:left;width:5px;height:26px;}
+.WellForm .ButtonL{background-position:0 -166px;}.WellForm .ButtonR{background-position:right -166px;margin-right:10px;}
+.WellForm .ButtonLH{background-position:0 -192px;}.WellForm .ButtonRH{background-position:right -192px;}
+.WellForm .WellButton{border:0;width:auto;font-size:12px;color:#fff!important;height:26px;padding:0 10px 3px;*padding-bottom:0;padding-bottom:0\9;font-family:arial;background-repeat:repeat-x;background-position:0 -218px;}
+.WellForm .WellButtonH{background-position:0 -244px;}
+/* ----表单控件CSS结束---- ↑ */
+
+form{float:left;padding:20px;border:2px dashed #ccc;margin:20px 0 0 40px;width:380px;}
+form .item{float:left;clear:both;width:100%;margin-bottom:10px;}
+.WellForm label{float:left;width:4em;height:21px;text-align:right;}
