@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>拖拽库-面向对象版</title>
+    <script src="JavaScript.js"></script>
+    <style type="text/css">
+    div,h2,p{margin:0;padding:0;}
+    body{font:14px/1.5 arial;}
+    #box{width:100px;height:100px;background:#fef4eb;padding:5px;margin:50px;border:1px solid #f60;}
+    #box .title{height:25px;background:#f60;}
+    #tool{margin-bottom:10px;}
+</style>
+</head>
+<body>
+    <div id="tool">
+        <input value="锁定范围" type="button">
+        <input value="水平锁定" type="button">
+        <input value="垂直锁定" type="button">
+        <input value="锁定位置" type="button">
+    </div>
+    <p>拖放状态：<span>未开始</span></p>
+    <div id="box">
+	    <h2 style="cursor: move;" class="title"></h2>
+    </div>
+</body>
+</html>
