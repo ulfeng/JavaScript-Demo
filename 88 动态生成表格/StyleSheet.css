@@ -1,0 +1,9 @@
+﻿body{font:700 14px/1.5 Arial;margin:0;padding:0 10px;}
+table{clear:both;border:1px solid #000;}
+td{color:#FFF;cursor:pointer;text-align:center;border:1px solid #000;padding:5px;}
+#setting{float:left;clear:left;line-height:28px;margin:10px 0;}
+#setting input{width:50px;font-family:inherit;border:2px solid #CCC;margin:0 5px;padding:4px;}
+#btn{font-size:14px;line-height:18px;color:#fff;text-decoration:none;background:#353535;border-top:1px #999 solid;border-radius:5px;padding:4px 6px;}
+#msg{float:left;clear:both;height:25px;display:none;line-height:25px;margin-bottom:10px;}
+#msg em{width:25px;height:25px;display:inline-block;margin-right:5px;}
+#setting label,#setting input,#setting a,#msg span,#msg em{float:left;}
