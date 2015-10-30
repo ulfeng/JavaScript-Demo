@@ -1,0 +1,114 @@
+﻿body, div, h5, ul, li {
+    margin:0;
+    padding:0;
+}
+body {
+    font:12px/1.5 Arial;
+}
+li {
+    list-style:none;
+}
+a:link, a:visited {
+    color:#333;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+#wrap {
+    width:836px;
+    border:3px solid #1972C0;
+    border-width:3px 0;
+    margin:10px auto;
+}
+#list {
+    overflow:hidden;
+    zoom:1;
+    margin-left:-10px;
+}
+#list .item {
+    display:inline;
+    float:left;
+    width:270px;
+    padding:0 0 10px 0;
+    border:1px solid #EBEBEB;
+    margin:10px 0 10px 10px;
+}
+#wrap .item .tab {
+    position:relative;
+    height:25px;
+    border-bottom:1px solid #ccc;
+    margin:8px;
+}
+#wrap .item .tab h5 {
+    position:absolute;
+    left:10px;
+    font-size:14px;    
+}
+#wrap .item .tab .switchBtn {
+    position:absolute;
+    top:3px;
+    right:0;
+}
+#wrap .item .tab .switchBtn a {
+    float:left;
+    width:15px;
+    height:15px;
+    margin-left:5px;
+    overflow:hidden;
+    text-indent:-999px;
+    outline:none;
+}
+#wrap .item .tab ul {
+    position:absolute;
+    top:-2px;
+    left:50px;width:160px;
+    height:28px;
+    overflow:hidden;   
+}
+#wrap .item .tab ul li {
+    float:left;
+    cursor:pointer;
+    line-height:26px;
+    padding:0 8px;   
+}
+#wrap .item .tab ul li.current {
+    cursor:text;
+    color:#e45e2e;
+    font-weight:700;
+    border:1px solid #ccc;
+    border-bottom-color:#fff;
+}
+#wrap .item .items {
+     display:none;
+     padding:0 15px; 
+}
+#wrap .item a {
+    color:#3a64b0;
+}
+#wrap .item .items li {
+    height:24px;
+    line-height:24px;
+    padding-left:20px;
+    border-bottom:1px solid #ebebeb;  
+}
+#wrap .item .btn {
+    height:22px;
+    margin-top:10px;
+}
+#wrap .item .btn a {
+    float:right;
+    width:74px;
+    height:22px;
+    overflow:hidden;
+    margin:0 15px 0 0;
+    text-indent:-9999px;
+}
+#wrap .item .btn a:hover {
+    float:right;
+    width:74px;
+    height:22px;
+    overflow:hidden;
+    margin:0 15px 0 0;
+    text-indent:-9999px;
+}
