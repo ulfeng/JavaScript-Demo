@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="JS代码,图片特效,JS广告代码,JS特效代码" />
+<meta name="description" content="此代码内容为手机移动端图片横向滚动效果，属于站长常用代码，更多图片特效代码请访问懒人图库JS代码频道。" />
+<title>手机移动端图片横向滚动效果_懒人图库</title>
+    <!--demo展示所用css，不用关心 begin-->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <!--demo展示所用css end-->
+    <!--组件依赖css begin-->
+    <link rel="stylesheet" type="text/css" href="css/widget/slider/slider.css" />
+<!--    <link rel="stylesheet" type="text/css" href="css/widget/slider/slider.default.css" /> <!--皮肤文件，若不使用该皮肤，可以不加载-->-->
+    <!--组件依赖css end-->
+    <!--组件依赖js begin-->
+    <script type="text/javascript" src="js/zepto.js"></script>
+	<script type="text/javascript" src="http://gmu.baidu.com/demo/mobileevent2pc.js"></script>      <!--此js为在PC端方便查看效果，用在手机上，可去掉此js-->
+    <script type="text/javascript" src="js/touch.js"></script>      <!--新版zepto合并版中不包括touch.js-->
+    <script type="text/javascript" src="js/zepto.extend.js"></script>
+    <script type="text/javascript" src="js/zepto.ui.js"></script>
+    <script type="text/javascript" src="js/widget/slider.js"></script>
+    <!--组件依赖js end-->
+</head>
+<body>
+<!-- 代码 开始 -->
+<div id="slider"></div>
+<script>
+
+    //创建slider组件
+    var slider = $.ui.slider('#slider', {
+        autoPlay:false,
+        showArr:false,
+        viewNum:3,
+        content:[
+            {
+                href: "#",
+                pic: "images/pic_1.jpg",
+                title:''
+            }, {
+                href: "#",
+                pic: "images/pic_2.jpg",
+                title: ""
+            }, {
+                href: "#",
+                pic: "images/pic_3.jpg",
+                title: ""
+            }, {
+                href: "#",
+                pic: "images/pic_4.jpg",
+                title: ""
+            },
+            {
+                href: "#",
+                pic: "images/pic_5.jpg",
+                title: ""
+            }, {
+                href: "#",
+                pic: "images/pic_6.jpg",
+                title: ""
+            }, {
+                href: "#",
+                pic: "images/pic_7.jpg",
+                title: ""
+            }, {
+                href: "#",
+                pic: "images/pic_8.jpg",
+                title: ""
+            }, {
+                href: "#",
+                pic: "images/pic_9.jpg",
+                title: ""
+            }, {
+                href: "#",
+                pic: "images/pic_10.jpg",
+                title: ""
+            }
+        ]
+    });
+</script>
+<!-- 图片高度自适应 -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	img_height = $('.ui-slider-item').children().children('img').height();
+	$('#slider').css('height',img_height + 'px');
+})
+</script>
+
+</body>
+</html>
