@@ -1,0 +1,58 @@
+﻿
+.
+/*通用类*/
+.select {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.select .top {
+    width: 95%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+        background: #000;
+        cursor: pointer;
+
+}
+
+.select .btn {
+    width: 5%;
+    height: 40px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    z-index: 101;
+    display: none;
+}
+
+.select ul {
+    width: 100%;
+    border-top: 0;
+    background: #fafafa;
+    display: none;
+}
+
+.select_hover ul {
+    display: block;
+}
+
+.select li {
+    height: 34px;
+    line-height: 34px;
+    color: #545454;
+}
+
+.select .hover {
+    background: #eee;
+    color: #22c780;
+}
+
+.select select {
+    display: none;
+}
+
+
