@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+</head>
+
+<body>
+    <script language="javascript">
+    //var Arraycolor = new Array("#00FF66", "#FFFF99", "#99CCFF", "#FFCCFF", "#FFCC99", "#00FFFF", "#FFFF00", "#FFCC00", "#FF00FF");
+    var Arraycolor=new Array("images/bg01.jpg","images/bg02.jpg");
+    var n = 0;
+
+    function turnColors() {
+    	n++;
+        if (n == (Arraycolor.length)){
+        	n = 0;
+        } 
+        
+        document.body.style.backgroundImage = "url(" + Arraycolor[n] +")";
+        setTimeout("turnColors()", 3000);
+    }
+    turnColors();
+    </script>
+</body>
+
+</html>
