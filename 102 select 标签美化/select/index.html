@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 50px 50px;
+        }
+        .btn-select {
+            position: relative;
+            display: inline-block;
+            width: 150px;
+            height: 25px;
+            background-color: #f80;
+            font: 14px/20px "Microsoft YaHei";
+            color: #fff;
+        }
+        .btn-select .cur-select {
+            position: absolute;
+            display: block;
+            width: 150px;
+            height: 25px;
+            line-height: 25px;
+            background: #f80 url(ico-arrow.png) no-repeat 125px center;
+            text-indent: 10px;
+        }
+        .btn-select:hover .cur-select {
+            background-color: #f90;
+        }
+        .btn-select select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 25px;
+            opacity: 0;
+            filter: alpha(opacity: 0;);
+            font: 14px/20px "Microsoft YaHei";
+            color: #f80;
+        }
+        .btn-select select option {
+            text-indent: 10px;
+        }
+        .btn-select select option:hover {
+            background-color: #f80;
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+<form>
+    <a class="btn-select" id="btn_select">
+        <span class="cur-select">请选择</span>
+        <select>
+            <option>选项一</option>
+            <option>选项二</option>
+            <option>选项三</option>
+            <option>选项四</option>
+            <option>选项五</option>
+        </select>
+    </a>
+</form>
+
+<script>
+    var $$ = function (id) {
+        return document.getElementById(id);
+    }
+    window.onload = function () {
+        var btnSelect = $$("btn_select");
+        var curSelect = btnSelect.getElementsByTagName("span")[0];
+        var oSelect = btnSelect.getElementsByTagName("select")[0];
+        var aOption = btnSelect.getElementsByTagName("option");
+        oSelect.onchange = function () {
+            var text=oSelect.options[oSelect.selectedIndex].text;
+            curSelect.innerHTML = text;
+        }
+    }
+
+</script>
+</body>
+</html>
