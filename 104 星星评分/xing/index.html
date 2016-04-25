@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星星打分效果</title>
+    <script type="text/javascript">
+        function rate(obj, oEvent) {
+            var imgSrc = 'xx_1.png';
+            var imgSrc_2 = 'xx_2.png';
+            // if(obj.rateFlag) return;
+            var e = oEvent || window.event;
+            var target = e.target || e.srcElement;
+            var imgArray = obj.getElementsByTagName("img");
+            for (var i = 0; i < imgArray.length; i++) {
+                imgArray[i]._num = i;
+                imgArray[i].onclick = function () {
+                    var inputId = this.parentNode.previousSibling;
+                    inputId.value = this._num + 1;
+                }
+            }
+            if (target.tagName == "IMG") {
+                for (var j = 0; j < imgArray.length; j++) {
+                    if (j <= target._num) {
+                        imgArray[j].src = imgSrc_2;
+                    } else {
+                        imgArray[j].src = imgSrc;
+                    }
+                    target.parentNode.onmouseout = function () {
+                        var imgNum = parseInt(target.parentNode.previousSibling.value);
+                        for (var n = 0; n < imgArray.length; n++) {
+                            imgArray[n].src = imgSrc;
+                        }
+                        for (var n = 0; n < imgNum; n++) {
+                            imgArray[n].src = imgSrc_2;
+                        }
+                    }
+                }
+            } else {
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+<p onclick="rate(this,event)">
+    <img src="xx_2.png" title="很烂">
+    <img src="xx_2.png" title="一般">
+    <img src="xx_1.png" title="还好">
+    <img src="xx_1.png" title="较好">
+    <img src="xx_1.png" title="很好">
+</p>
+
+</body>
+</html>
+
