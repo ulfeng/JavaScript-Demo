@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>带表情kindEditor编辑器 - 站长素材</title>
+<style>
+	form {
+		margin: 0;
+	}
+	h3{
+		text-align:center;
+	}
+	textarea {
+		display: block;
+	}
+	form .ke-container {
+		margin: 0 auto;
+	}
+</style>
+<link href="themes/default/default.css" rel="stylesheet" />
+<script src="js/kindeditor-min.js"></script>
+<script src="js/emoticons.js"></script>
+<script src="js/zh_CN.js"></script>
+<script>
+		var editor;
+		KindEditor.ready(function(K) {
+			editor = K.create('textarea[name="content"]', {
+				resizeType : 1,
+				allowPreviewEmoticons : false,
+				allowImageUpload : false,
+				items : [
+					'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+					'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+					'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+			});
+		});
+</script>
+</head>
+<body>
+<h3>KindEditor更改默认的表情图片</h3>
+<form>
+	<textarea name="content" style="width:700px;height:200px;visibility:hidden;">KindEditor</textarea>
+</form>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
