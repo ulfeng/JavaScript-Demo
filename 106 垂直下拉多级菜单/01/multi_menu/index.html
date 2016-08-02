@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery实现多级手风琴菜单</title>
+<meta name="keywords" content="多级下拉菜单, jquery插件" />
+<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="accordion.js"></script>
+<script type="text/javascript">
+$(function(){
+   $(".nav").accordion({
+        //accordion: true,
+        speed: 500,
+	    closedSign: '[+]',
+		openedSign: '[-]'
+	});
+}); 
+</script>
+<style>
+ul{list-style:none}
+.demo{width:300px; margin:40px auto; padding:10px; background:#f7f7f7}
+.nav {width: 213px; padding: 40px 28px 25px 0; font-family: "Microsoft yahei", Arial, Helvetica, sans-serif;} 
+ul.nav {padding: 0; margin: 0; font-size: 1em; line-height: 0.5em; list-style: none;} 
+ul.nav li {} 
+ul.nav li a {line-height: 10px; font-size: 14px; padding: 10px 5px; color: #000; display: block; text-decoration: none; font-weight: bolder;}
+ul.nav li a:hover {background-color:#675C7C;    color:white;}
+ul.nav ul { margin: 0; padding: 0;display: none;} 
+ul.nav ul li { margin: 0; padding: 0; clear: both;} 
+ul.nav ul li a { padding-left: 20px; font-size: 12px; font-weight: normal;}
+ul.nav ul li a:hover {background-color:#D3C99C; color:#675C7C;} 
+ul.nav ul ul li a {color:silver; padding-left: 40px;} 
+ul.nav ul ul li a:hover { background-color:#D3CEB8; color:#675C7C;} 
+ul.nav span{float:right;}
+</style>
+</head>
+
+<body>
+<div id="header">
+   <div id="logo"><h1><a href="http://www.helloweba.com" title="返回helloweba首页">helloweba</a></h1></div>
+</div>
+<div id="main">
+   <h2 class="top_title"><a href="http://www.helloweba.com/view-blog-175.html">jQuery实现多级手风琴菜单</a></h2>
+   <div class="demo">
+      <ul class="nav">
+         <li><a href="http://www.helloweba.com" target="_blank">首页</a></li>
+         <li><a href="#">服务</a>
+              <ul>
+                  <li><a href="#">JAVASCRIPT</a></li>
+                  <li><a href="#">PHP</a></li>
+                  <li><a href="#">MYSQL</a></li>
+                  <li><a href="#">LINUX</a></li>
+              </ul>
+         </li>
+         <li><a href="#">案例</a></li>
+         <li><a href="#">文章</a></a>
+              <ul>
+                   <li class="active"><a href="http://www.helloweba.com/blog-4.html" target="_blank">XHTML/CSS</a></li>
+                   <li><a href="#">Javascript/Ajax/jQuery</a>
+                        <ul>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Event</a></li>
+                            <li><a href="#">Games</a></li>
+                            <li><a href="#">Images</a></li>
+                        </ul>
+                   </li>
+                   <li><a href="http://www.helloweba.com/blog-6.html" target="_blank">PHP/MYSQL</a></li>
+                   <li><a href="http://www.helloweba.com/blog-7.html" target="_blank">前端观察</a></li>
+                   <li><a href="http://www.helloweba.com/blog-9.html" target="_blank">HTML5/移动WEB应用</a></li>
+              </ul>
+         </li>
+         <li><a href="http://www.helloweba.com/about.html" target="_blank">关于</a></li>
+      </ul>
+   </div>
+</div>
+
+<div id="footer">
+    <p>Powered by helloweba.com  允许转载、修改和使用本站的DEMO，但请注明出处：<a href="http://www.helloweba.com">www.helloweba.com</a></p>
+</div>
+<p id="stat"><script type="text/javascript" src="http://js.tongji.linezing.com/1870888/tongji.js"></script></p>
+</body>
+</html>
