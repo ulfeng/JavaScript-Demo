@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="utf-8" />
+<title>HTML5文件上传</title>
+
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+	<div class="contr"><h2>您可以选择文件（图像），然后点击上传按钮</h2></div>
+
+	<div class="upload_form_cont">
+		<form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php">
+			<div>
+				<div><label for="image_file">请选择图像文件</label></div>
+				<div><input type="file" name="image_file" id="image_file" onChange="fileSelected();" /></div>
+			</div>
+			<div>
+				<input type="button" value="上传" onClick="startUploading()" />
+			</div>
+			<div id="fileinfo">
+				<div id="filename"></div>
+				<div id="filesize"></div>
+				<div id="filetype"></div>
+				<div id="filedim"></div>
+			</div>
+			<div id="error">你应该选择有效的图像文件！</div>
+			<div id="error2">上传文件时出错</div>
+			<div id="abort">该上传已被用户或浏览器取消连接</div>
+			<div id="warnsize">你的文件是非常大的。我们不能接受它。请选择更小的文件</div>
+
+			<div id="progress_info">
+				<div id="progress"></div>
+				<div id="progress_percent">&nbsp;</div>
+				<div class="clear_both"></div>
+				<div>
+					<div id="speed">&nbsp;</div>
+					<div id="remaining">&nbsp;</div>
+					<div id="b_transfered">&nbsp;</div>
+					<div class="clear_both"></div>
+				</div>
+				<div id="upload_response"></div>
+			</div>
+		</form>
+
+		<img id="preview" />
+	</div>
+</div>
+
+
+</body>
+</html>
